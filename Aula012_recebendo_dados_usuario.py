@@ -3,8 +3,7 @@ Recebendo dados do usuário
 """
 
 # Entrada de dados:
-print('Qual é o seu nome?')
-nome = input()
+nome = input('Qual é o seu nome? ')
 
 # Saída de dados. Exemplos com prints antigos:
 
@@ -22,8 +21,7 @@ nome = input()
 
 # Saída e saída de dados. Exemplo com prints atuais:
 print(f'Seja bem vindo(a) {nome}')
-print('Qual é a sua idade?')
-idade = input()
+idade = int(input('Qual é a sua idade? '))
 print(f'Que legal {nome}, {idade} anos é uma ótima idade!')
-ano = 2023 - int(idade)
+ano = 2023 - idade #Cast - conversão de um tipo de dado para outro
 print(f'Você nasceu em {ano}. Este foi um ano incrível!')
