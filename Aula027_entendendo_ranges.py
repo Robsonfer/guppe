@@ -13,10 +13,12 @@ Forma 2:
 range(valor_de_inicio, valor_de_parada) -> Valor de parada não inclusive (início definido, passo de 1 em 1)
 
 Forma 3:
-range(valor_de_inicio, valor_de_parada, passo) -> Valor de parada não inclusive (início definido, valor de parada definido, passo definido)
+range(valor_de_inicio, valor_de_parada, passo) -> Valor de parada não inclusive (início definido, valor de parada
+definido, passo definido)
 
 Forma 4 (igual à 3 mas ao inverso):
-range(valor_de_inicio, valor_de_parada, passo) -> Valor de parada não inclusive (início definido, valor de parada definido, passo definido)
+range(valor_de_inicio, valor_de_parada, passo) -> Valor de parada não inclusive (início definido, valor de parada
+definido, passo definido)
 
 """
 
