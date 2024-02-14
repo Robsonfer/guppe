@@ -116,11 +116,46 @@ lista4 = list(range(11))
 lista5 = list('Geek University')
 
 print('------------------------------------------------------------------------')
-
 # Imprimindo a lista inversa:
 lista1.reverse()
-print('Imprimindo a lista invertida:')
+lista2.reverse()
+print('Imprimindo a lista invertida com reverse:')
 print(lista1)
+print(lista2)
+
+print('E podemos fazer de outra forma com slice:')
+print(lista1[::-1])
+print(lista2[::-1])
 
 print('------------------------------------------------------------------------')
+# Corrigindo as listas invertidas:
+lista1.reverse()
+lista2.reverse()
+
+# Copiando uma lista:
+print('Podemos copiar uma lista')
+lista3 = lista2.copy()
+print(lista3)
+
+print('------------------------------------------------------------------------')
+# Descobrindo o tamanho de uma lista:
+print('Descobrindo o tamanho de uma lista com len:')
+print(len(lista5))
+
+print('------------------------------------------------------------------------')
+# Removendo o último elemento de uma lista:
+print('Removendo o último elemento de uma lista com pop:')
+print(lista5)
+lista5.pop()
+print(lista5)
+lista5.pop()
+print(lista5)
+# OBS: O pop não somente remove o último elemento, mas também o retorna.
+
+# Ainda podemos remover um elemento pelo índice:
+print('Removendo um ítem pelo índice:')
+print(lista5)
+lista5.pop(2)
+print(lista5)
+
 
