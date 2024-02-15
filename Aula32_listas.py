@@ -195,6 +195,60 @@ print(curso)
 # Basicamente o comando diz: Pegue a lista curso, coloque espaços entre cada elemento e transforme em uma string.
 # Podemos fazer isso com outros caracteres além do espaço.
 
+print('------------------------------------------------------------------------')
+# Iterando sobre listas:
+
+#Exemplo 1 Utilizando for:
+print('Iterando sobre listas - Exemplo 1 (for):')
+print(f'Lista1: {lista1}')
+for elemento in lista1:
+    print(elemento)
+
+# Inclusive podemos fazer o seguinte para tornar a iteração dinâmica para um uso:
+print('Inclusive podemos utilizar essa iteração fazendo uma soma:')
+print(f'Os elementos da lista4 são: {lista4}')
+soma = 0
+for elemento in lista4:
+    soma += elemento
+print(f'A soma dos elentos da lista4 é: {soma}')
+# Desde que respeitemos os tipos, podemos somar até mesmo strings, o que vai me gerar uma concatenação de caracteres gerando uma string única.
+
+#Exemplo 2 Utilizando While:
+print('Iterando sobre lsitas - Exemplo 2 (while):')
+"""
+carrinho = []
+produto = ''
+
+while produto != 'sair':
+    print("Adicione um produto na lista ou digite 'sair' para sair: ")
+    produto = input()
+    if produto != 'sair':
+        carrinho.append(produto)
+
+for produto in carrinho:
+    print(produto)
+
+print(carrinho)
+"""
+
+print('------------------------------------------------------------------------')
+print('Deixarei comentado o item de iteração com while, pois ele pede input!')
+print('------------------------------------------------------------------------')
+
+# Utilizando variáveis em listas:
+print('Utilizando variáveis em listas:')
+numeros = [1, 2, 3, 4, 5]
+print(numeros)
+
+num1 = 1
+num2 = 2
+num3 = 3
+num4 = 4
+num5 = 5
+
+numeros = [num1, num2, num3, num4, num5]
+print(numeros)
+
 # ------------------------------------------------------------------------
-# Parei a aula com 1:16:01 de 2:21:37
+# Parei a aula com 1:26:06 de 2:21:37
 # ------------------------------------------------------------------------
