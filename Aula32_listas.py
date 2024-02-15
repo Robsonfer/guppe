@@ -107,7 +107,6 @@ print('Aumentando a lista1 com os itens da lista2 com o operador soma:')
 lista1 = lista1 + lista2
 print(lista1)
 
-
 # Renovando as listas para continuar com os exemplos com as listas na íntegra:
 lista1 = [1, 99, 4, 27, 15, 22, 3, 1, 44, 42, 27]
 lista2 = ['G', 'e', 'e', 'k', ' ', 'U', 'n', 'i', 'v', 'e', 'r', 's', 'i', 't', 'y']
@@ -116,11 +115,86 @@ lista4 = list(range(11))
 lista5 = list('Geek University')
 
 print('------------------------------------------------------------------------')
-
 # Imprimindo a lista inversa:
 lista1.reverse()
-print('Imprimindo a lista invertida:')
+lista2.reverse()
+print('Imprimindo a lista invertida com reverse:')
 print(lista1)
+print(lista2)
+
+print('E podemos fazer de outra forma com slice:')
+print(lista1[::-1])
+print(lista2[::-1])
 
 print('------------------------------------------------------------------------')
+# Corrigindo as listas invertidas:
+lista1.reverse()
+lista2.reverse()
 
+# Copiando uma lista:
+print('Podemos copiar uma lista')
+lista6 = lista2.copy()
+print(lista6)
+
+print('------------------------------------------------------------------------')
+# Descobrindo o tamanho de uma lista:
+print('Descobrindo o tamanho de uma lista com len:')
+print(len(lista5))
+
+print('------------------------------------------------------------------------')
+# Removendo o último elemento de uma lista:
+print('Removendo o último elemento de uma lista com pop:')
+print(lista5)
+lista5.pop()
+print(lista5)
+lista5.pop()
+print(lista5)
+# OBS: O pop não somente remove o último elemento, mas também o retorna.
+
+# Ainda podemos remover um elemento pelo índice:
+print('Removendo um ítem pelo índice:')
+print(lista5)
+lista5.pop(2)
+print(lista5)
+# Os elementos à direita deste índice serão todos deslocados para a esquerda.
+# OBS: Se não houver elemento no índice informado, teremos um erro chamado IndexError
+
+# Podemos ainda remover todos os elementos de uma lista:
+print('Removendo todos os elementos de uma lista de uma só vez (zerar a lista):')
+print(lista5)
+lista5.clear()
+print(lista5)
+
+print('------------------------------------------------------------------------')
+# Podemos multiplicar uma lista:
+print('Multiplicando os itens de uma lista usando *:')
+nova = [1, 2, 3]
+nova *= 3
+print(nova)
+
+print('------------------------------------------------------------------------')
+# Podemos facilmente converter uma string para uma lista:
+print('Convertendo uma string para uma lista. Exemplo 1 (split):')
+curso = 'Programação em Python Essencial'
+print(curso)
+curso = curso.split()
+print(curso)
+# Por padrão o split separa os elementos da lista pelo espaço entre elas.
+
+print('Convertendo uma string para uma lista. Exemplo 2 (delimitando a divisão com vírgula):')
+curso = 'Programação,em,Python,Essencial'
+print(curso)
+curso = curso.split(',')
+print(curso)
+
+# Convertendo uma lista em string:
+print('Agora convertendo uma lista em string (Join):')
+print(curso)
+curso = ' '.join(curso)
+print(curso)
+# Basicamente o comando diz: Pegue a lista curso, coloque espaços entre cada elemento e transforme em uma string.
+# Podemos fazer isso com outros caracteres além do espaço.
+
+# ------------------------------------------------------------------------
+# Parei a aula com 1:16:01 de 2:21:37
+# ------------------------------------------------------------------------
