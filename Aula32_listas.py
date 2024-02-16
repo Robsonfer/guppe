@@ -249,6 +249,140 @@ num5 = 5
 numeros = [num1, num2, num3, num4, num5]
 print(numeros)
 
-# ------------------------------------------------------------------------
-# Parei a aula com 1:26:06 de 2:21:37
-# ------------------------------------------------------------------------
+print('------------------------------------------------------------------------')
+# Em listas fazemos o acesso aos elementos de forma indexada
+print('Acessando os elementos da lista pelo índice:')
+cores = ['verde', 'amarelo', 'azul', 'branco']
+print(cores[0])
+print(cores[1])
+print(cores[2])
+print(cores[3])
+
+# Fazendo o acesso aos elementos de forma indexada inversa;
+print('Fazendo o acesso aos elementos de forma indexada inversa:')
+print(cores[-1])
+print(cores[-2])
+print(cores[-3])
+print(cores[-4])
+# para entender melhor o índice negativo, pense na lista como um círculo, onde o final de um elemento está ligado ao início da lista.
+
+print('------------------------------------------------------------------------')
+print('Imprimindo os itens da lista usando loop for:')
+for cor in cores:
+    print(cor)
+
+print('Imprimindo os itens da lista usando loop while:')
+indice = 0
+while indice < len(cores):
+    print(cores[indice])
+    indice += 1
+
+print('------------------------------------------------------------------------')
+print('Gerando índice em um loop for:')
+for indice, cor in enumerate(cores):
+    print(indice, cor)
+
+print('------------------------------------------------------------------------')
+# Relembrando que listas aceitam valores repetidos
+print('Relembrando que listas aceitam repetição de valores:')
+lista7 = []
+lista7.append(42)
+lista7.append(42)
+lista7.append(33)
+lista7.append(33)
+lista7.append(42)
+print(lista7)
+
+print('------------------------------------------------------------------------')
+# Outros métodos não tão importantes mas também úteis para se trabalhar com listas:
+print('Encontrar o índice de um elemento na lista:')
+numeros = [5, 6, 7, 5, 8, 9, 10]
+
+print('Em qual índice da lista está o valor 6?')
+print(numeros.index(6))
+
+print('Em qual índice da lista está o valor 9?')
+print(numeros.index(9))
+# OBS: Caso não exista o elemento na lista, será apresentado um erro.
+
+print('Se tivermos elementos repetidos ao pedir o índice, retorna o índice do primeiro elemento encontrado:')
+print(numeros.index(5))
+
+print('Podemos fazer a busca dentro de um range estabelecendo onde iniciar')
+print(numeros.index(5, 2))
+# Traduzindo, encontre o elemento 5 a partir do índice 2!
+
+print('Podemos fazer a busca dentro de um range estabelecendo onde iniciar e onde terminar')
+print(numeros.index(5, 2, 5))
+# Traduzindo, encontre o elemento 5 a partir do índice 2 e pare no índice 5!
+
+print('------------------------------------------------------------------------')
+# Revisando Slicing:
+# lista[início:fim:passo]
+# range[início:fim:passo]
+
+print('Trabalhando com slice de lista com o parâmetro início:')
+lista8 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+print(lista8[1:])
+
+print('Trabalhando com slice Imprimindo todos os elementos(::):')
+print(lista8[::])
+
+print('Trabalhando com slice de lista com parâmetro início e fim:')
+print(lista8[1:6])
+
+print('Trabalhando com slice de lista só com parâmetro fim:')
+print(lista8[:6])
+
+print('Trabalhando com slice de lista com parâmetro início, fim e com passo de 2:')
+print(lista8[1:8:2])
+
+print('Trabalhando com slice de lista somente com passo de 2 e fim:')
+print(lista8[:11:2])
+
+print('Trabalhando com slice de lista com índice negativo:')
+print(lista8[-3:]) # Lembre da lista como um círculo.
+
+print('Trabalhando com slice de lista com parâmetro início, com passo de 2 até o final:')
+print(lista8[1::2])
+
+print('Trabalhando com slice de lista com parâmetro início, com passo de negativo:')
+print(lista8[::-1]) # A lista acaba sendo invertida.
+
+print('------------------------------------------------------------------------')
+print('Invertendo valores em uma lista:')
+nomes = ['Geek', 'University']
+nomes[0], nomes[1] = nomes[1], nomes[0]
+print(nomes)
+print('Lembrando que para isso tbm podemos usar o reverse!')
+
+print('------------------------------------------------------------------------')
+# Realizar: Soma*, valor máximo*, valor mínimo* e tamanho de uma lista.
+# * Somente se os valores forem todos inteiros ou reais.
+print('Econtrando soma, máximo, mínimo e tamanho de uma lista:')
+lista9 = [1, 2, 3, 4, 5, 6]
+print(f'Eis a lista9: {lista9}')
+print(sum(lista9))
+print(max(lista9))
+print(min(lista9))
+print(len(lista9))
+
+print('------------------------------------------------------------------------')
+print('Transformando uma lista em tupla:')
+print(lista9)
+print(type(lista9))
+tupla = tuple(lista9)
+print(tupla)
+print(type(tupla))
+
+print('------------------------------------------------------------------------')
+# Desempacotamento de lista:
+print('Desempacotamento de listas:')
+lista10 = [1, 2, 3]
+n1, n2, n3 = lista10
+print(n1)
+print(n2)
+print(n3)
+# Se a quantidade de elementos for diferente da quantidade de dados o Python apontará um erro!
+
+print('------------------------------------------------------------------------')
