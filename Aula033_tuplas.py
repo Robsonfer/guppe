@@ -62,3 +62,40 @@ print(f'Exemplo de soma: {sum(tupla)}')
 print(f'Exemplo de Valor Máximo: {max(tupla)}')
 print(f'Exemplo de Valor Mínimo: {min(tupla)}')
 # Se houver uma string no meio por exemplo, daria um erro.
+
+print('-----------------------------------------------------------')
+# Concatenação de tuplas:
+print('Concatenando tuplas:')
+print(f'Essa é a tupla: {tupla}')
+print(f'Essa é a tupla1: {tupla1}')
+print('Resultado da concatenação:')
+print(tupla + tupla1) # Concatenando!
+print('Note que concatenamos as tuplas, mas elas continuam imutáveis:')
+print(f'Essa ainda é a tupla: {tupla}')
+print(f'Essa ainda é a tupla1: {tupla1}')
+
+print('Mas se quisermos criar uma nova tupla com essa soma, basta fazer assim:')
+tupla6 = tupla + tupla1
+print(f'Agora nós temos uma nova tupla que é a tupla6: {tupla6}')
+
+print('Sobrescrevendo os valores da tupla:')
+tupla += tupla1 # Sobrescrevendo!
+print(f'Veja a tupla com valores sobrescritos de tupla1: {tupla}')
+# As tuplas são imutáveis, mas podemos sobrescrever seus valores!
+
+print('-----------------------------------------------------------')
+# Podemos verificar se determinado elemento está contigo na tupla:
+print('Verifcando se o elemento está contido na tupla:')
+print(f'Existe o núemero 3 na tupla? {3 in tupla}')
+print(f'Existe o núemero 33 na tupla? {33 in tupla}')
+# Funciona exatamente como na lista.
+
+print('-----------------------------------------------------------')
+print('Iterando sobre uma tupla:')
+for n in tupla:
+    print(n)
+
+print('-----------------------------------------------------------')
+print('Iterando com índice:')
+for indice, valor in enumerate(tupla):
+    print(indice, valor)
