@@ -386,3 +386,34 @@ print(n3)
 # Se a quantidade de elementos for diferente da quantidade de dados o Python apontará um erro!
 
 print('------------------------------------------------------------------------')
+# Copiando uma lista para outra (Deep Copy)
+print('Copiando uma lista para outra utilizando Deep Copy:')
+
+print(f'Imprimindo a lista10: {lista10}')
+
+novaLista = lista10.copy()
+print(f'Imprimindo a cópia da lista10, a novaLista: {novaLista}')
+
+novaLista.append(4)
+print(f'Reimprimindo a lista10: {lista10}')
+print(f'Reimprimindo a novaLista depois de somar um elemnto: {novaLista}')
+
+"""
+Veja que ao utilizarmos lista.copy(), copiamos os dados da lista para uma nova lista, mas as listas ficaram totalmente independentes uma da outra. Isso em Python é chamado de Deep Copy.
+"""
+
+# Copiando uma lista para outra (Shallow Copy)
+print('Copiando uma lista para outra utilizando Shallow Copy:')
+
+print(f'Imprimindo a lista10: {lista10}')
+
+novaLista2 = lista10
+print(f'Imprimindo a cópia da lista10, a novaLista2: {novaLista2}')
+
+novaLista2.append(4)
+print(f'Reimprimindo a lista10: {lista10}')
+print(f'Reimprimindo a novaLista2 depois de somar um elemnto: {novaLista2}')
+
+"""
+Veja que neste novo caso, nós fizemos a cópia via atribuição e copiamos os dados da lista10 para a nova lista2, mas após realizar modificação em uma das listas, essa modificação se refletiu em ambas as listas. Isso em Python é chamado de Shallow Copy.
+"""
