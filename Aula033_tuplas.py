@@ -96,6 +96,71 @@ for n in tupla:
     print(n)
 
 print('-----------------------------------------------------------')
-print('Iterando com índice:')
+print('Iterando sobre uma tupla com índice:')
 for indice, valor in enumerate(tupla):
     print(indice, valor)
+
+print('-----------------------------------------------------------')
+print('Contando elementos dentro de uma tupla:')
+
+tupla7 = ('a', 'b', 'c', 'd', 'b', 'e', 'a', 'b')
+print(f'Esta é a tupla7: {tupla7}')
+print(f'Quantas letras a eu tenho? {tupla7.count('a')}')
+print(f'Quantas letras b eu tenho? {tupla7.count('b')}')
+print(f'Quantas letras c eu tenho? {tupla7.count('c')}')
+
+print('Ainda dentro da mesma ideia, vamos usar a string escola:')
+universidade = tuple('UNIVESP')
+print(f'Esta é a tupla universidade: {universidade}')
+print(f'Quantas letras e eu tenho? {universidade.count('E')}')
+
+print('-----------------------------------------------------------')
+
+# Dicas na utililzação de tuplas:
+
+# Devemos utilizar tupla SEMPRE que não for preciso modificar os dados de uma coleção.
+# Exemplo:
+
+meses = ('Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro')
+print(meses)
+# Se fosse uma lista, eu poderia acrescentar um 13º mês com append.
+
+# O acesso a elementos de uam tupla também é semelhante ao de uma lista.
+# Exemplo:
+
+print(f'Qual é o mês da posição 5 da tupla? {meses[5]}')
+
+# Iterar com while:
+print('Iterando os itens da tupla com while:')
+i = 0
+while i < len(meses):
+    print(meses[i])
+    i += 1
+
+# Verificando em qual índice um elemento está na tupla:
+print('Verificando em qual índice um elemento está na tupla:')
+print(f'Qual é o índice do mês de Setembro? {meses.index('Setembro')}')
+# Caso o elemento não exista, será retornado um erro.
+# Assim como na lista, se houverem itens repetidos, ele vai retornar o primeiro.
+# Tudo o que funciona na lista, funciona nas tuplas com exceção das regras do início da aula.
+
+# Slicing -> tupla[inicio:fim:passo]
+print('usando slice começando do índice 5 até o final em meses:')
+print(meses[5:]) # do índice 5 até o final!
+
+# Copiando de uma tupla para outra:
+print('Copiando uma tupla para outra:')
+print(f'Esta é a tupla1: {tupla1}')
+tupla8 = tupla1 # Na tupla não temos o problema de gerar Shallow Copy!
+print(f'Veja agora a tupla8 copiada da tupla1: {tupla8}')
+nova = (7, 8, 9, 10, 11, 12)
+print(f'Esta é a tupla nova: {nova}')
+tupla8 += nova
+print(nova)
+print(tupla8)
+
+"""
+Por quê utilizar tuplas?
+1 - Tuplas são mais rápidas do que listas;
+2 - Tuplas deixam seu código mais seguro (imutabiliade).
+"""
