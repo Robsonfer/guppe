@@ -6,7 +6,6 @@ Muito parecido com listas. Existem basicamente duas diferenças:
 1 - As tuplas são representadas por parênteses ()
 2 - As tuplas são imutáveis: isso signigica que ao se criar uma tupla, ela não pode ser mudada.
     Toda operação em uma tupla gera uma nova tupla.
-
 """
 print('Provando que as tuplas são representadas por parênteses:')
 print(type(()))
@@ -33,14 +32,14 @@ tupla4 = (4,)
 print(tupla4)
 print(f'O tipo da tupla4 é: {type(tupla4)}')
 
-# CONCLUSÃO: Podemos concluir que tuplas são definidas pela vírgula e não pelo uso do parênte.
+# CONCLUSÃO: Podemos concluir que tuplas são definidas pela vírgula e não pelo uso do parêntese.
 # (4) -> não é tupla | (4,) -> é tupla | 4 -> não é tupla | 4, -> é tupla
 
 print('-----------------------------------------------------------')
 print('Criando uma tupla com range:')
 tupla = tuple(range(11))
 print(tupla)
-# Podemos gerar uma tupla dinamicamente com range. Tudo nos padrões já vistos anteriormente.
+# Podemos gerar uma tupla dinamicamente com range. Tudo nos padrões já vistos anteriormente em listas.
 
 print('-----------------------------------------------------------')
 print('Desempacotamento de tupla:')
@@ -56,7 +55,7 @@ IMPORTANTE: Métodos de adição e remoção de elementos nas tuplas não existe
 """
 
 print('-----------------------------------------------------------')
-# Soma, Valo Máximo, Valor Mínimo e tamanho pode ser realizado se os valores forem todos inteiros:
+# Soma, Valo Máximo, Valor Mínimo e tamanho pode ser realizado se os valores forem todos inteiros ou reais:
 print(f'Tupla de exemplo: {tupla}')
 print(f'Exemplo de soma: {sum(tupla)}')
 print(f'Exemplo de Valor Máximo: {max(tupla)}')
@@ -114,6 +113,9 @@ universidade = tuple('UNIVESP')
 print(f'Esta é a tupla universidade: {universidade}')
 print(f'Quantas letras e eu tenho? {universidade.count('E')}')
 
+"""IMPORTANTE: Lembrando que nesse caso como o Python é case sensitive, devemos buscar especificamente
+a letra como ela é ou então converter todo o texto para minúsculo ou maíusculos dentro da busca."""
+
 print('-----------------------------------------------------------')
 
 # Dicas na utililzação de tuplas:
@@ -122,13 +124,13 @@ print('-----------------------------------------------------------')
 # Exemplo:
 
 meses = ('Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro')
-print(meses)
+print(f'Os meses do ano são imutáveis: {meses}')
 # Se fosse uma lista, eu poderia acrescentar um 13º mês com append.
 
 # O acesso a elementos de uam tupla também é semelhante ao de uma lista.
 # Exemplo:
 
-print(f'Qual é o mês da posição 5 da tupla? {meses[5]}')
+print(f'Qual é o mês da posição 5 da tupla? Resposta: {meses[5]}')
 
 # Iterar com while:
 print('Iterando os itens da tupla com while:')
