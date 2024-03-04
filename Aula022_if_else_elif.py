@@ -3,7 +3,7 @@ Estruturas condicionais
 if, else, elif
 """
 
-idade = 18
+idade = 6
 
 if idade < 18:
     print('Menor de idade')
