@@ -93,6 +93,50 @@ Existem duas formas de criar um diciónário em Python:
 - No caso das listas e tuplas para acessar os elementos, basta usar `[0]` que acessamos o índice zero. Entretanto os dicionários não são indexados. Portanto no lugar do índice, usamos a chave.
 - A utilização de uma chave inexistente irá gerar um erro.
 
+#### _Explicação da aula sobre o tipo None_
+
+O tipo de dado None em Python representa a ausência de tipo ou conhecido também como tipo vazio, ou seja, é a definição de um elemento sem tipo definido.
+
+**Observações Importantes:**
+- Quando devemos utilizar o tipo None? Quando quisermos criar uma variável e inicializá-la sem tipo antes de receber um valor final. Aí define-se o tipo.
+- O tipo None será SEMPRE considerado como False!
+- É melhor buscar o item pelo get do que pela chave, pois com get se der erro, a aplicação não para.
+- Pela chave podemos tratar o erro, mas com get elimina-se a etapa de tratativa desse erro.
+- O tipo None é _SEMPRE_ especificado com a primeira letra maiúscula.
+
+Veja abaixo o tipo de dado None mostrado no terminal como ficaria:
+
+```
+numeros = None
+print(numeros)
+print(type(numeros))
+
+None
+<class 'NoneType'>
+```
+**Exemplo de busca usando o get com if/else evitando o erro:**
+```
+Russia = paises.get('ru')
+if Russia:
+    print('Encontrei o País')
+else:
+    print('Não encontrei o País')
+```
+
+**Exemplo de busca usando o get sem o if/else evitando o erro:**
+```
+pais = paises.get('din', 'Não encontrado')
+print(pais)
+```
+
+Nesse caso acima estamos definindo uma informação em caso de não encontrar a chave. Basicamente o que estamos fazendo é determinando uma variável `país` para armazenar a informação buscada por `paises.get()` de maneira pontual e mandando o Python fazer o seguinte: _procure a chave `'din'` dentro do dicionário `paises`, caso não encontre, coloque `'Não encontrado'` no lugar_.
+
+O bom do código dessa forma é que fica muito mais enxuto e não precisamos das condicionais!
+
+#### Consultado se o elemento está no dicionário pela chave:
+
+
+
 #### 
 
 ### Mapas
