@@ -169,7 +169,7 @@ print(f'Alterando o valor do mês de Maio em receita através da forma 2: {recei
 print('------------------------------------------------------------------------------')
 # COMO REMOVER DADOS DE UM DICIONÁRIO:
 
-# Forma 1:
+# Forma 1 (mais comum):
 receita.pop('jun')
 print(f'Removendo o mês de Junho de receita através da forma 1: {receita}')
 # Nesta forma precisamos sempre informar a chave e caso a chave não seja encontrada, um KeyErro é retornado.
@@ -178,3 +178,56 @@ print(f'Removendo o mês de Junho de receita através da forma 1: {receita}')
 ret = receita.pop('mai')
 print(f'Valor retornado do receita.pop referente à chave mai: {ret}')
 print(f'Removendo o mês de Maio de receita através da forma 1: {receita}')
+
+# Forma 2:
+del receita['abr']
+print(f'Removendo o mês de Abril de receita através da forma 2: {receita}')
+# Se tentarmos remover novamente o mês de Abril, será gerado um KeyError
+# OBSERVAÇÃO IMPORTANTE: No caso da Forma 2 o valor removido não é retornado.
+
+print('------------------------------------------------------------------------------')
+"""
+ONDE E PRA QUÊ UTILIZA-SE DICIONÁRIOS?
+
+Imagine que vc tem um comércio eletrônico, onde temos um carrinho de compras na qual adicionamos produtos.
+
+Carrinho de Compras:
+    Produto 1:
+        - nome;
+        - quantidade;
+        - preço;
+    Produto 2:
+        - nome;
+        - quantidade;
+        - preço;
+"""
+
+# Opção 1: Podemos utilizar uma lista para armazenar estes itens:
+carrinho = []
+produto1 = ['Playstation 4', 1, 2300.00]
+produto2 = ['God of War 4', 1, 150.00]
+carrinho.append(produto1)
+carrinho.append(produto2)
+
+print(f'Este é o carrinho da Opção 1 - Lista: {carrinho}')
+# Mas nesse caso eu preciso saber qual é o índice de cada informação do produto.
+
+# Opção 2: Podemos utilizar uma tupla para arazenar estes itens:
+produto3 = ('Playstation 4', 1, 2300.00)
+produto4 = ('God of War 4', 1, 150.00)
+carrinho2 = (produto3, produto4)
+print(f'Este é o carrinho da Opção 2 - Tuplas: {carrinho2}')
+# Mas neste caso como no caso da lista precisamos saber qual é o índice de cada informação do produto. Listas e tuplas são semelhantes.
+
+# Opção 3: Usando um dicionário:
+carrinho3 = []
+produto5 = {'nome': 'Playstation 4', 'quantidade': 1, 'preco': 2300.00}
+produto6 = {'nome': 'God of War', 'quantidade': 1, 'preco': 150.00}
+carrinho3.append(produto5)
+carrinho3.append(produto6)
+print(f'Este é o carrinho da Opção 3 - Dicionário: {carrinho3}')
+# Basicamente no caso de dicionários não precisamos nos preocupar com o índice e sim com a definição da chave que é comum à tudo dentro do sistema.
+print(f'Assim podemos buscar o item pela chave: {produto5.get('nome'), produto5.get('preco')}')
+
+print('------------------------------------------------------------------------------')
+# Métodos de dicionários:
