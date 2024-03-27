@@ -212,7 +212,7 @@ carrinho.append(produto2)
 print(f'Este é o carrinho da Opção 1 - Lista: {carrinho}')
 # Mas nesse caso eu preciso saber qual é o índice de cada informação do produto.
 
-# Opção 2: Podemos utilizar uma tupla para arazenar estes itens:
+# Opção 2: Podemos utilizar uma tupla para armazenar estes itens:
 produto3 = ('Playstation 4', 1, 2300.00)
 produto4 = ('God of War 4', 1, 150.00)
 carrinho2 = (produto3, produto4)
@@ -230,4 +230,52 @@ print(f'Este é o carrinho da Opção 3 - Dicionário: {carrinho3}')
 print(f'Assim podemos buscar o item pela chave: {produto5.get('nome'), produto5.get('preco')}')
 
 print('------------------------------------------------------------------------------')
-# Métodos de dicionários:
+# MÉTODOS DE DICIONÁRIOS:
+
+# Limpar o dicionário (zerar dados):
+
+d = dict(a=1, b=2, c=3)
+print(f'Este é o dicionário d: {d}')
+print(f'Este é o tipo do dicionário d: {type(d)}')
+
+print('limpando o dicionário (zerar dados):')
+d.clear()
+print(f'Este é o dicionário d depois do método clear: {d}')
+
+# Copiando um dicionário para outro:
+
+# Forma 1 - Deep Copy:
+d = dict(a=1, b=2, c=3)
+novo = d.copy()
+print(f'Este é o dicionário novo copiado de d: {novo}')
+novo['d'] = 4
+print(f'Este é o dicionário novo copiado de d adicionado mais uma chave e valor: {novo}')
+print(f'Este é o dicionário d original: {d}')
+
+# Forma 2 - Shallow Copy:
+novo1 = d
+print(f'Este é o dicionário novo1 copiado de d: {novo1}')
+novo1['d'] = 4
+print(f'Este é o dicionário d original: {d}')
+print(f'Este é o dicionário novo1 copiado de d adicionado mais uma chave e valor: {novo1}')
+# Repare que ambos receberam a chave 'd' e valor 4.
+
+# Forma não usual de criação de dicionários:
+outro = {}.fromkeys('a', 'b')
+print(outro)
+print(type(outro))
+
+usuario = {}.fromkeys(['nome', 'pontos', 'email', 'profile'], 'desconnhecido')
+print(usuario)
+print(type(usuario))
+# O método fromkeys recebe os dois parâmetros: um iterável e um valor.
+# Ele vai gerar para cada valor iterável uma chave e irá atribuir a esta chave o valor informado.
+
+veja = {}.fromkeys('teste', 'valor')
+print(veja)
+print(type(veja))
+
+# Podemos insclusive usar o range:
+veja1 = {}.fromkeys(range(1, 11), 'novo')
+print(veja1)
+print(type(veja1))
