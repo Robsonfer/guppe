@@ -140,6 +140,54 @@ O bom do código dessa forma é que fica muito mais enxuto e não precisamos das
 #### 
 
 ### Mapas
+Mapas, conhecidos em Python como Dicionários (Obs: Essa aula é uma continuação da aula 34)
+
+#### Iterando sobre Dicionários:
+
+Para cada chave dentro de receita, imprima a chave:
+```
+for chave in receita:
+    print(chave)
+```
+Para cada chave dentro de receita, imprima o valor da receita:
+```
+for chave in receita:
+    print(receita[chave])
+```
+Para cada chave dentro de receita, imprima a chave e o valor da receita:
+```
+for chave in receita:
+    print(f'{chave} : {receita[chave]}')
+```
+Podemos ainda personalizar o exemplo anterior:
+```
+for chave in receita:
+    print(f'Em {chave} a receita foi de R$ {receita[chave]},00')
+```
+Assim ficará o resultado no terminal:
+```
+Em jan a receita foi de R$ 100,00
+Em fev a receita foi de R$ 250,00
+Em mar a receita foi de R$ 400,00
+```
+#### Tendo acesso direto à todas as chaves:
+Podemos simplesmente ter acesso direto às chaves desta forma:
+```
+print(receita.keys())
+```
+Ficará assim no terminal:
+```
+dict_keys(['jan', 'fev', 'mar'])
+```
+Podemos usar o .keys() para fazer o for:
+```
+for chave in receita.keys():
+    print(receita[chave])
+```
+Essa é inclusive a forma recomendada de fazer a Iteração!
+
+
+
 
 ### Conjuntos
 
