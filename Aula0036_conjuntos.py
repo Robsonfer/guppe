@@ -26,9 +26,28 @@ s = {1, 2, 3, 4, 5, 5, 6, 7, 2, 3} # Repare que em "s" temos valores repetidos.
 print(s)
 print(type(s))
 # OBS: Ao criar um conjunto, caso seja adicionado um valor já existente, o mesmo será ignorado sem gerar erro e não fará parte do conjunto.
-
+set
 """
 Forma 2 (mais comum): A forma 2 e mais comumente usada é na verdade a forma 1.
 Pelo que eu compreendi, a forma 1: s = set({1, 2, 3}) o Pycharm não aceita mais.
 Todas as vezes que eu tentei fazer o editor corrigiu para a forma correta.
 """
+
+# Podemos verificar se determinado elemento está contido no conjunto:
+if 3 in s:
+    print(f'Temos o número 3 em {s}')
+else:
+    print(f'Não temos o número 3 em {s}')
+
+# Importante lembrar que além de não ter valores duplicados, não temos valores ordenados tabmém:
+dados = 99, 2, 34, 23, 2, 12, 1, 44, 5, 34
+
+lista = list(dados)
+tupla = tuple(dados)
+dicionario = {}.fromkeys(dados)
+conjunto = set(dados)
+
+print(f'Esta é a nossa lista: {lista}')
+print(f'Esta é a nossa tupla: {tupla}')
+print(f'Esta é o nosso dicionário: {dicionario}')
+print(f'Este é o nosso conunto: {conjunto}')
