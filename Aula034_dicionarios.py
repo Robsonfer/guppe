@@ -9,8 +9,6 @@ OBSVAÇÕES IMPORTANTES:
 - Chave e valor são separados por dois pontos;
 - Tanto chave quanto valor podem ser de qualquer tipo de dado;
 - Podemos misturar tipos de dados;
-
-
 """
 
 print('------------------------------------------------------------------------------')
