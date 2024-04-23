@@ -1,0 +1,3 @@
+"""
+Funções com parâmetro padrão
+"""
