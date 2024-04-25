@@ -1,0 +1,3 @@
+"""
+Entendendo o *args
+"""

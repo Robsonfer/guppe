@@ -71,4 +71,42 @@ print(mat(2, 2, subtracao))
 # Nesta função definimos dois parâmetros obrigatórios e um opcional recebendo a função soma.
 # Neste caso se o usuário informar uma outra função, ele vai aceitar.
 
-# Parei aos 29:30 da aula, iniciando o assunto escopo!
+# ESCOPO
+
+# Variáveis globais
+instrutor = 'Geek' # Variável global
+
+def diga_ola():
+    return f'Olá, {instrutor}.'
+print(diga_ola())
+
+# Variáveis locais
+def diga_oi():
+    instrutor = 'Python'
+    return f'Oi, {instrutor}.'
+print(diga_oi())
+
+# OBS: No caso das duas variáveis terem o mesmo nome, a variável local sobrepõe a variável global.
+# ATENÇÃO: Se puder, evite variáveis globais.
+
+# Como utilizar uma variável global dentro de uma função:
+total = 0
+def incrementa():
+    global total # Avisando ao Python que estamos usando a variável global dentro da função!
+    total += 1
+    return total
+print(incrementa())
+print(incrementa())
+print(incrementa())
+
+# Podemos ter funções que são declaradas dentro de funções, e também tem uma forma especial de escopo de variável:
+
+def fora():
+    contador = 0
+    def dentro():
+        nonlocal contador
+        contador += 1
+        return contador
+    return dentro()
+
+print(fora())
