@@ -65,8 +65,38 @@ print(mostra_info(1, 2, 3, sobrenome='University', cargo='Instrutor'))
 # Função com a ordem incorreta dos parâmetros
 def mostra_info(a, b, instrutor='Geek', *args, **kwargs):
     return [a, b, args, instrutor, kwargs]
+# Resultado com a ordem correta:
+# [1, 2, (3,), 'Geek', {'sobrenome': 'University', 'cargo': 'Instrutor'}]
 
 print(mostra_info(1, 2, 3, sobrenome='University', cargo='Instrutor'))
 # Veja que temos um desencontro de informações entre o args o instrutor!
+# [1, 2, (), 3, {'sobrenome': 'University', 'cargo': 'Instrutor'}]
 
-# PAREI EM 30:30 !!!
+# Desempacotar com o **kwargs
+
+# Exemplo 1:
+def mostra_nome(**kwargs):
+    return f"{kwargs['nome']} {kwargs['sobrenome']}"
+
+nomes = {'nome': 'Robson', 'sobrenome': 'Ferreira'}
+
+print(mostra_nome(**nomes))
+
+# Exemplo 2:
+def soma_multiplos_numeros(a, b, c, **kwargs):
+    print(a + b + c)
+
+lista = [1, 2, 3]
+tupla = (1, 2, 3)
+conjunto = {1, 2, 3}
+soma_multiplos_numeros(*lista)
+soma_multiplos_numeros(*tupla)
+soma_multiplos_numeros(*conjunto)
+
+dicionario = dict(a=1, b=2, c=3, nome='Geek')
+soma_multiplos_numeros(**dicionario)
+
+# OBS IMPORTANTE: Os nomes nas chaves em um dicionário devem ser o mesmo dos parâmetros da função.
+# Caso informe diferente, receberá um TypeError
+
+soma_multiplos_numeros(**dicionario, lang='Python')

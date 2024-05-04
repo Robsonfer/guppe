@@ -21,7 +21,6 @@ No caso da função acima, se passarmos menos argumentos ou mais argumentos do q
 Ainda que colocássemos valores padrão para todos os parâmetros no âmbito de cessar o erro (feito depois para representar o segundo print), no caso de informar mais argumentos ainda teríamos o mesmo erro.
 
 Uma forma de corrigir esse erro seria adicionar mais um parâmetro à função, mas e se em outro momento eu quiser colocar cinco ou mais argumentos? Depender sempre de adicionar um novo parâmetro pra cobrir a entrada de um novo argumento não está correto.
-
 """
 
 # Entendendo o *args:
@@ -59,6 +58,5 @@ def soma_numeros(*args):
 numeros = [1, 2, 3, 4, 5, 6, 7]
 print(soma_numeros(*numeros))
 """
-O asterisco serve para que informemos ao Python que estamos passando como argumento uma coleção de dados. Desta forma ele saberá que precisará
-antes desempacotar estes dados.
+O asterisco serve para que informemos ao Python que estamos passando como argumento uma coleção de dados. Desta forma ele saberá que precisará antes desempacotar estes dados.
 """
