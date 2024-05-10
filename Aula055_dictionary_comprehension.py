@@ -31,4 +31,15 @@ quadrados = {valor: valor ** 2 for valor in nums}
 # Traduzindo: Para cada valor da lista nums coloque o valor como chave e eleve o mesmo valor ao quadrado e use como valor de chave/valor
 print(quadrados)
 
-# Parei em 12:11
+# Exemplo 3:
+chaves = 'abcde'
+valores = [1, 2, 3, 4, 5]
+
+mistura = {chaves[i]: valores[i] for i in range(0, len(chaves))}
+print(mistura)
+
+# Exemplo 4 (com lógica condicional):
+numeros = [1, 2, 3, 4, 5]
+res = {num: ('par' if num % 2 == 0 else 'ímpar') for num in numeros}
+# Traduzindo: Para cada num em números, se o mod 2 de num for igual a zero, valor = 'par', caso contrário, valor = 'ímpar'
+print(res)

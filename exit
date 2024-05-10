@@ -1,0 +1,274 @@
+[33mcommit 2b17866955cbe094902b70b97b5a20f57f2da08c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Robson <robsonnfer@gmail.com>
+Date:   Thu May 9 16:42:24 2024 -0300
+
+    aula dict comprehension
+
+[33mcommit 40ec324f33d1e373da333ad0df629279fc5d8689[m
+Author: Robson <robsonnfer@gmail.com>
+Date:   Thu May 9 14:51:52 2024 -0300
+
+    Aula054 part2
+
+[33mcommit 5b197fe25c6ce15b8d8c74ec7ca7f43f6703e7c5[m
+Merge: cb39493 85730eb
+Author: Robson <76750320+Robsonfer@users.noreply.github.com>
+Date:   Wed May 8 21:14:11 2024 -0300
+
+    Merge branch 'main' of https://github.com/Robsonfer/guppe
+
+[33mcommit cb394930e9f1b3defdecc35843a79082e408175c[m
+Author: Robson <76750320+Robsonfer@users.noreply.github.com>
+Date:   Wed May 8 21:12:53 2024 -0300
+
+    Aulas 053 e 054
+
+[33mcommit 85730eb82752d85e32a161e3f5d5d8ef6404de22[m
+Author: Robson <robsonnfer@gmail.com>
+Date:   Tue May 7 11:02:24 2024 -0300
+
+    Teste aula 53
+
+[33mcommit 7e50c7624bd24eb8e83a9ed2dce9e3395a557bea[m
+Author: Robson <76750320+Robsonfer@users.noreply.github.com>
+Date:   Fri May 3 22:07:49 2024 -0300
+
+    Finalizando Aula050
+
+[33mcommit fe0dd51132cc97992f0b883e9a259dfb7b2f24d2[m
+Author: Robson <robsonnfer@gmail.com>
+Date:   Thu Apr 25 16:26:21 2024 -0300
+
+    Aula050 **kwargs em andamento
+
+[33mcommit 002d9f3685a353a81054c37c69920e11f4a21d31[m
+Author: Robson <robsonnfer@gmail.com>
+Date:   Thu Apr 25 11:10:53 2024 -0300
+
+    Aula049 Finalizada
+
+[33mcommit dbb1bb2531ff6c421482fc21893350c1c945f6a6[m
+Author: Robson <76750320+Robsonfer@users.noreply.github.com>
+Date:   Wed Apr 24 21:13:33 2024 -0300
+
+    finalizada Aula047 e 048, iniciada Aula049
+
+[33mcommit 4c744a79b7d79186948c5d8436e03c8d4e5ef048[m
+Author: Robson <76750320+Robsonfer@users.noreply.github.com>
+Date:   Tue Apr 23 21:12:57 2024 -0300
+
+    começo da Aula047
+
+[33mcommit 1b9faca5e16c81bb54e9e991340bf9fa47c24e39[m
+Author: Robson <76750320+Robsonfer@users.noreply.github.com>
+Date:   Tue Apr 23 16:37:40 2024 -0300
+
+    Aula046 e começo Aula047
+
+[33mcommit 02eec05304619d13448efb733b42351dbf3d2905[m
+Author: Robson <76750320+Robsonfer@users.noreply.github.com>
+Date:   Tue Apr 23 12:35:31 2024 -0300
+
+    Aula045 and refactoring Aula036 to Aula 044
+
+[33mcommit bed64882b3e893aa5b878a7a210e6b26bae63119[m
+Author: Robson <robsonnfer@gmail.com>
+Date:   Fri Apr 19 16:34:16 2024 -0300
+
+    começo aula 45
+
+[33mcommit 290a6288da8f0de2382750f5606808c36e6e6046[m
+Author: Robson <76750320+Robsonfer@users.noreply.github.com>
+Date:   Wed Apr 17 21:40:27 2024 -0300
+
+    aula de funções
+
+[33mcommit 90aeccc32b5a84eed40a032c9646535169942643[m
+Author: Robson <76750320+Robsonfer@users.noreply.github.com>
+Date:   Mon Apr 15 15:33:25 2024 -0300
+
+    aulas 37 a 39
+
+[33mcommit 9323334ea72e0c2598a745fd2173b199d42b3827[m
+Author: Robson <76750320+Robsonfer@users.noreply.github.com>
+Date:   Wed Apr 10 22:14:46 2024 -0300
+
+    fim aula 036
+
+[33mcommit e766e3ae2bd7e02088a8afdd5612b1580ee607bc[m
+Author: Robson <76750320+Robsonfer@users.noreply.github.com>
+Date:   Tue Apr 9 21:57:03 2024 -0300
+
+    aula 36
+
+[33mcommit ae425180faefc3d3afc8b24aed3aa92b2fac6eb6[m
+Author: Robson <76750320+Robsonfer@users.noreply.github.com>
+Date:   Mon Apr 8 21:50:20 2024 -0300
+
+    aula 036 em andamento
+
+[33mcommit bddea7a0c4bc6adfa5202f4ac2934a1a08bb79cc[m
+Author: Robson <76750320+Robsonfer@users.noreply.github.com>
+Date:   Fri Mar 29 21:26:57 2024 -0300
+
+    aula 35 completa
+
+[33mcommit 69a204253acc3a43ab7ac7cf2a30322fb21836b3[m
+Author: Robson <76750320+Robsonfer@users.noreply.github.com>
+Date:   Tue Mar 26 22:17:44 2024 -0300
+
+    aula dicionários finalizada FINALMENTE
+
+[33mcommit 03f948645f23b75c3882f0d6f5aee471c718bd99[m
+Author: Robson <76750320+Robsonfer@users.noreply.github.com>
+Date:   Sun Mar 24 22:57:54 2024 -0300
+
+    finalizando aula
+
+[33mcommit 82559c83c7f1da6d9bc16e3839911e04bb74771d[m
+Author: Robson <76750320+Robsonfer@users.noreply.github.com>
+Date:   Thu Mar 21 21:51:36 2024 -0300
+
+    aula 34 dicionários
+
+[33mcommit f435c1adf35c6b2956d06185490083a29e44651a[m
+Author: Robson <76750320+Robsonfer@users.noreply.github.com>
+Date:   Tue Mar 19 22:15:17 2024 -0300
+
+    Atualizando o arquivo .md
+
+[33mcommit 686ddd2236e41ecc88eccb137895ef501bec0a1c[m
+Author: Robson <robsonnfer@gmail.com>
+Date:   Tue Mar 5 11:48:03 2024 -0300
+
+    aula 34
+
+[33mcommit 1f3754c542560cf6301916c9c2f0ae350aee4bda[m
+Author: Robson <robsonnfer@gmail.com>
+Date:   Mon Mar 4 16:39:38 2024 -0300
+
+    aula 34 em andamento
+
+[33mcommit 4920aecdcc3311f44fad87df378e1c522e380f39[m
+Author: Robson <robsonnfer@gmail.com>
+Date:   Mon Mar 4 10:54:44 2024 -0300
+
+    aula 22
+
+[33mcommit 255d5bc04832aef5cbf73a9573076aecc7f739c5[m
+Author: Robson <76750320+Robsonfer@users.noreply.github.com>
+Date:   Sun Mar 3 22:00:00 2024 -0300
+
+    fim aula 33, começo aula 34
+
+[33mcommit 1c4e78d9df1b51c0e0263dd8ccae28f09512c07b[m
+Author: Robson <76750320+Robsonfer@users.noreply.github.com>
+Date:   Tue Feb 20 21:48:53 2024 -0300
+
+    Finalizada a Aula33_tuplas.py
+
+[33mcommit 7d617b0561da735e3df29a3c07200603599bbd54[m
+Author: Robson <76750320+Robsonfer@users.noreply.github.com>
+Date:   Mon Feb 19 21:47:13 2024 -0300
+
+    Aula33_tuplas.py
+
+[33mcommit b1cd253a24023c47508aa0543f4d334f07577fbe[m
+Author: Robson <76750320+Robsonfer@users.noreply.github.com>
+Date:   Mon Feb 19 21:01:39 2024 -0300
+
+    refactored 3 classes, added Aula 33
+
+[33mcommit 7d3ff89fedf7c5db29e9fde65713e833662b564c[m
+Author: Robson <76750320+Robsonfer@users.noreply.github.com>
+Date:   Thu Feb 15 23:02:40 2024 -0300
+
+    Aula32_listas
+
+[33mcommit 6a97cc15d5326fa2d83ccf342c0904ba0d1ba89f[m
+Author: Robson <robsonnfer@gmail.com>
+Date:   Thu Feb 15 12:48:40 2024 -0300
+
+    continuacao Aula32_listas
+
+[33mcommit 7dd3238375cde54769019858bb1e4ab4f5a98dee[m
+Merge: df3a169 681a4d5
+Author: Robson <robsonnfer@gmail.com>
+Date:   Thu Feb 15 08:24:45 2024 -0300
+
+    necessary to equal main
+
+[33mcommit 681a4d56d51d1a93d1b3468b2378d8d740d5666e[m
+Author: Robson <76750320+Robsonfer@users.noreply.github.com>
+Date:   Wed Feb 14 22:01:52 2024 -0300
+
+    atualizacao Aula32_listas.py
+
+[33mcommit e8c9b7dcf2d11846fe9fbc25c832929ecba0771a[m
+Author: Robson <76750320+Robsonfer@users.noreply.github.com>
+Date:   Wed Feb 14 20:43:58 2024 -0300
+
+    alteracao aula 32 listas
+
+[33mcommit df3a1694cfbaf5d59a02cbebb7e05757a38f1465[m
+Merge: 5091f6c a2eea55
+Author: Robson <robsonnfer@gmail.com>
+Date:   Wed Feb 14 12:35:12 2024 -0300
+
+    Merge branch 'main' of https://github.com/Robsonfer/guppe
+
+[33mcommit 5091f6c154e03e45e8cc12de42aa67bb1690e236[m
+Author: Robson <robsonnfer@gmail.com>
+Date:   Wed Feb 14 12:34:43 2024 -0300
+
+    alteracao aula listas
+
+[33mcommit a2eea55e2c0e5af87a724c6ae5cdf2387cee30ae[m
+Author: Robson <76750320+Robsonfer@users.noreply.github.com>
+Date:   Sat Feb 10 21:39:46 2024 -0300
+
+    Aula 32 adicionada
+
+[33mcommit aef074979c281438d851fa2a45f9e4f3b3659e1b[m
+Author: Robson <robsonnfer@gmail.com>
+Date:   Thu Feb 8 16:50:42 2024 -0300
+
+    Aula 29 finalizada
+
+[33mcommit 6c6009bc8f3db0270d0f5ee3c48c7c567e251dff[m
+Author: Robson <76750320+Robsonfer@users.noreply.github.com>
+Date:   Wed Dec 27 21:49:32 2023 -0300
+
+    feat: while loop class finished
+
+[33mcommit 8f12b48752b44897761a2515c02d090c13556cd7[m
+Author: Robson <76750320+Robsonfer@users.noreply.github.com>
+Date:   Mon Dec 25 21:33:12 2023 -0300
+
+    Alteração no README.md
+
+[33mcommit 44d7af743e4c743ee62a5b361ed886939f37ada2[m
+Author: Robson <76750320+Robsonfer@users.noreply.github.com>
+Date:   Mon Dec 25 21:29:37 2023 -0300
+
+    Update README.md
+
+[33mcommit 13249c1882de9565606af9d0d37f915fec69693b[m
+Author: Robson <76750320+Robsonfer@users.noreply.github.com>
+Date:   Mon Dec 25 21:27:26 2023 -0300
+
+    Create README.md
+
+[33mcommit 95f8d8e5bdb5590c6165387e40a6cb1b9aa65fc4[m
+Author: Robson Ferreira <RobsonFER@armco.com.br>
+Date:   Tue Dec 19 07:49:22 2023 -0300
+
+    Aula 26 finalizada
+
+[33mcommit 1f28a0508e3030ef1d9e1f2396d159fa17d68f5e[m
+Author: Robson <76750320+Robsonfer@users.noreply.github.com>
+Date:   Mon Dec 18 22:29:57 2023 -0300
+
+    Aula 25 finalizada
+
+[33mc
