@@ -44,3 +44,15 @@ print('---- Exemplos any() ----')
 print(any([0, 1, 2, 3, 4])) # De 0 a 4 sabemos que o 0 é False, mas em any() basta que 1 item seja True
 print(any([])) # False porque a lista é vazia
 print(any([0, False, {}, (), []])) # False porque todos os elementos da lista são False
+
+# Retornando a lista de nomes com any():
+print(any([nome[0] == 'C' for nome in nomes]))
+
+# Reconhecendo números pares com any():
+print(any([num for num in [4, 2, 10, 6, 8, 9] if num % 2 == 0]))
+# O any() funciona como uma pergunta se há numeros pares na lista
+
+"""
+all() funciona como um 'and', ou seja, se A = 1 e B = 1, A*B = True
+any() funciona como um 'or', ou seja, se A = 1 ou B = 1, A+B = True
+"""
