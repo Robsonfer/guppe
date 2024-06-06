@@ -14,7 +14,7 @@ def diz_oi():
     """
     return 'Oi! '
 
-from Aula048_docstrings import diz_oi
+from aula044_docstrings import diz_oi
 
 print(diz_oi())
 
