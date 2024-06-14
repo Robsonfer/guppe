@@ -1,19 +1,77 @@
 # Repositório das aulas do Curso de Python da Geek University da Udemy
 ___
 ## Sobre este documento
-Este documento visa criar um caderno de estudos durante o andamento do curso. O objetivo é estudar a linguagem de programação em questão e ao mesmo tempo treinar o formado markdown e se preparar posteriormente para a criação de documentações. 
+Este documento visa criar um caderno de estudos durante o andamento do curso de Python da Geek University.
+
+O objetivo é estudar a linguagem de programação em questão e ao mesmo tempo, treinar o formato markdown e se preparar posteriormente para a criação de documentações.
+
+Com base nesta última informação, deixo aqui o repositório com as orientações sobre edição de arquivos markdown: https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
 ___
-## Seção 2 - Praparando o ambiente
+## Seção 1 - Apresentação do Curso
 
-### Instalação no Windows
+### 1. Sobre o curso
+Neste tópico temos basicamente uma explanação sobre o que vem por aí.
 
-### Ambientes virtuais
+### 2. Informações importantes
+
+Todos os cursos da Geek University são constantemente atualizados quando há necessidade. Desta forma, novas seções ou aulas podem ser adicionadas em diferentes partes do curso. Pode ser, por exemplo, que você inicie uma aula onde eu informo o nome ou número da seção ou aula que não condiz com a seção ou aula que você está estudando. Ignore isto e se atente ao conteúdo da aula na sequência que está assistindo.
+
+Você poderá encontrar materiais para download em algumas seções/aulas do curso. Caso encontre problemas para realizar os downloads, acesse o suporte da plataforma Udemy sobre este tema em: https://support.udemy.com/hc/en-us/articles/229604708-Downloading-Course-Resources
+
+Se tiver dúvidas ou problemas sobre as aulas do curso, faça uma pesquisa na Área de Perguntas e Respostas presente na página do curso. Se você não encontrar uma solução para sua dúvida ou problema, crie um novo tópico postando prints de tela de forma que possamos analisar todo o contexto e então te auxiliar. Se não souber usar a Área de Perguntas e Respostas, você pode verificar o guia presente na plataforma Udemy em https://support.udemy.com/hc/en-us/articles/229233387-How-to-Use-The-Q-A
+
+Ao finalizar o curso você poderá gerar um certificado simples gerado pela plataforma Udemy. Caso você esteja com problemas em gerar este certificado, verifique este tópico na plataforma Udemy: https://support.udemy.com/hc/en-us/articles/229603868-Certificate-of-Completion
+
+Ao finalizar o curso você poderá solicitar um certificado completo gerado pela Geek University em https://www.geekuniversity.com.br/certificados
+
+### 3. Preparação do ambiente
+Neste tópico também não temos vídeo, somente um texto com os links para download das ferramentas necessárias para dar sequência no curso.
+
+SOFTWARES UTILIZADOS DURANTE O CURSO:
+
+Python: https://www.python.org/downloads/
+
+JAVA JDK LTS: https://www.oracle.com/java/technologies/downloads/
+
+PyCharm Community: https://www.jetbrains.com/pycharm/download/
+
+### 4. Testando o ambiente preparado
+Neste tópico é explicado como instalar as ferramentas necessárias como o próprio Python, o JDK do Java e a IDE Pycharm. Mas o mais importante fica a cargo do ambiente virtual.
+
+Para programar de forma profissional com o Python, é importante iniciar cada projeto dentro de seu próprio ambiente virtual. Isso é necessário para que em cada ambiente tenha sua própria versão da linguagem e de suas bibliotecas. Existem empresas que trabalham com outras versões das linguagens e devido à limitações de outras tecnologias, não atualizam estas versões. Portanto, usar os ambientes virtuais possibilita que cada projeto tenha suas particularidades sem conflitos.
+
+O próprio Python já tem a ferramenta para esse ambiente virtual chamado venv (virtual environments).
+
+Você encontrará o primeiro código criado neste módulo no repositório ***[guppe](https://github.com/Robsonfer/guppe)*** como ***[aula04_teste.py](https://github.com/Robsonfer/guppe/blob/main/aula04_teste.py)***, ou clicando no link com o nome da aula.
+___
+## Seção 2 - Introdução à linguagem Python
+
+### 5. O que vamos aprender nessa seção?
+
+### 6. PEP8 - Boas Práticas
+
+### 7. Dir e Help
+
+### 8. Recebendo dados do usuário
+
+### 9. Recapitulando
+
 ___
 ## Seção 3 - Introdução à linguagem:
 
-### PEP8 - Boas práticas
+### 10. O que vamos aprender nessa seção
 
-### Dir e Help
+### 11. O tipo numérico
+
+### 12. O tipo float
+
+### 13. O tipo boolean
+
+### 14. O tipo string
+
+### 15. Escopo de variáveis
+
+### 16. Recapitulando
 
 ### Recebendo dados do usuário
 ___

@@ -67,12 +67,18 @@ print(list(zip(*dados))) # Lembre-se que usamos o * para desempacotar os valores
 # suponha que temos três alunos com duas notas cada um. Queremos saber qual á a maior nota de cada um deles:
 prova1 = [80, 91, 78]
 prova2 = [98, 89, 53]
+prova3 = [98, 98, 79]
+prova4 = [60, 75, 99]
 alunos = ['Maria', 'Pedro', 'Carla']
 
 # Usando um dictionary compreension fazemos isso facilmente:
-final = {dado[0]: max(dado[1], dado[2]) for dado in zip(alunos, prova1, prova2)}
+final = {dado[0]: max(dado[1], dado[2], dado[3], dado[4]) for dado in zip(alunos, prova1, prova2, prova3, prova4)}
 """
 Tradução: dado na posição zero será a chave e para o valor vamos coletar o maior valor (max) entre o dado da posição 1 
 e o dado da posição 2. Fazer isso para cada dado do zip(alunos, prova1, prova2)!
 """
 print(final)
+
+# Outra forma de fazer é com o map:
+final = zip(alunos, map(lambda nota: max(nota), zip(prova1, prova2, prova3, prova4)))
+print(dict(final))
