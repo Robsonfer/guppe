@@ -1,7 +1,7 @@
 # Repositório das aulas do Curso de Python da Geek University da Udemy
 ___
 ## Sobre este documento
-Este documento visa é criar um caderno de estudos durante o andamento do curso. O objetivo é estudar a linguagem de programação em questão e ao mesmo tempo treinar o formado markdown e se preparar posteriormente para a criação de documentações. 
+Este documento visa criar um caderno de estudos durante o andamento do curso. O objetivo é estudar a linguagem de programação em questão e ao mesmo tempo treinar o formado markdown e se preparar posteriormente para a criação de documentações. 
 ___
 ## Seção 2 - Praparando o ambiente
 
