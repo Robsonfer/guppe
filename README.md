@@ -5,7 +5,9 @@ Este documento visa criar um caderno de estudos durante o andamento do curso de 
 
 O objetivo é estudar a linguagem de programação em questão e ao mesmo tempo, treinar o formato markdown e se preparar posteriormente para a criação de documentações.
 
-Com base nesta última informação, deixo aqui o repositório com as orientações sobre edição de arquivos markdown: https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+Portanto, nenhum conteúdo de uso exclusivo para alunos da Geek University será encontrado neste documento. Os arquivos e links disponibilizados neste documento o direcionarão somente para conteúdos livres de direitos autorais como Sites abertos da Internet, o repositório em questão, e repositórios de outros que venha nos ajudar a melhor compreender o conteúdo do curso. 
+
+Com base nestas últimas informações, deixo aqui o repositório com as orientações sobre edição de arquivos markdown: https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
 ___
 ## Seção 1 - Apresentação do Curso
 
@@ -47,8 +49,12 @@ ___
 ## Seção 2 - Introdução à linguagem Python
 
 ### 5. O que vamos aprender nessa seção?
+Neste tópico é comentado o que será apresentando nesta seção, nada de aula foi mostrado.
 
 ### 6. PEP8 - Boas Práticas
+Tudo o que você precisar sobre Python poderá ser encontrado dentro do site oficial da linguagem: https://www.python.org/
+
+Durante o decorrer deste documento, serão disponibilizados links diretos para o assunto em questão como por exemplo, para esta aula, o ***[PEP8](https://wiki.python.org.br/GuiaDeEstilo)***
 
 ### 7. Dir e Help
 
