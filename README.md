@@ -1,5 +1,6 @@
 # Repositório das aulas do Curso de Python da Geek University da Udemy
 ___
+
 ## Sobre este documento
 Este documento visa criar um caderno de estudos durante o andamento do curso de Python da Geek University.
 
@@ -152,16 +153,51 @@ variavel_longa = 3
 
 7. Termine sempre uma instrução com uma nova linha
 
+É importante lembrar que o Pycharm é a IDE adotada como oficial para o Python, portanto ela tem ferramentas exclusivas que outras IDEs não têm como por exemplo avisos quando fugimos dos padrões da PEP8.
+
+O código dessa aula pode ser encontrado aqui: [aula006_pep8.py](https://github.com/Robsonfer/guppe/blob/main/aula006_pep8.py) 
+
 ### 7. Dir e Help
+São utilitários Python para auxiliar na programação:
+
+- Dir = Apresenta todos os atributos/propriedades, funções/métodos disponíveis para determinado tipo de dado ou variável.
+- Help = Apresenta a documentação/Como utilizar os atribuos/propriedades e funções/métodos disponíveis para determinado
+tipo de dado ou variável.
+
+Exemplo do uso de dir():
+
+`print(dir('Robson'))`
+
+Resultado do comando acima:
+```chatinput
+['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__',
+'__getitem__', '__getnewargs__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__',
+'__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__',
+'__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format',
+'format_map', 'index', 'isalnum', 'isalpha', 'isascii', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable',
+'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'removeprefix', 'removesuffix', 'replace',
+'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title',
+'translate', 'upper', 'zfill']
+```
+
+Exemplo do uso de help():
+```
+num = 4
+help(num)
+````
+
+O resultado do comando `help(num)` é tão grande que não faz sentido ser colocado aqui, mas basicamente ele mostra toda a documentação do que for consultado dentro do `help()`.
+
+O código dessa aula pode ser encontrado clicando aqui: [aula007_dir_e_help.py](https://github.com/Robsonfer/guppe/blob/main/aula007_dir_e_help.py)
 
 ### 8. Recebendo dados do usuário
 
+
 ### 9. Recapitulando
-
 ___
-## Seção 3 - Introdução à linguagem:
+## Seção 3: Variáveis e Tipos de Dados em Python
 
-### 10. O que vamos aprender nessa seção
+### 10. O que vamos aprender nessa seção?
 
 ### 11. O tipo numérico
 
@@ -175,43 +211,41 @@ ___
 
 ### 16. Recapitulando
 
-### Recebendo dados do usuário
+## Seção 4: Estruturas Lógicas e Condicionais em Python
+
+### 17. O que vamos aprender nessa seção?
+
+### 18. If, else, elif
+
+### 19. AND, OR, NOT, IS
+
+### 20. Recapitulando
+
 ___
-## Seção 4 - Variáveis e Tipos de dados em Python
+## Seção 5: Estruturas de Repetição em Python
 
-### Tipo numérico
+### 21. O que vamos aprender nesta seção?
 
-### Tipo float
+### 22. Loop for
 
-### Tipo booleano
+### 23. Entendendo e explorando ranges
 
-### Tipo string
+### 24. Loop while
 
-### Escopo de variáveis
+### 25. Saindo de loops com break
 
-## Seção 5 - Estruturas lógicas e condicionais em Python
+### 26. Recapitulando
 
-### If, else, elif
-
-### AND, OR, NOT, IS
 ___
-## Seção 6 - Estruturas de repetição em Python
+## Seção 6 - Coleções Python
 
-### Loop for
+### 27. O que vamos aprender nesta seção?
 
-### Ranges
+### 28. Listas
 
-### Loop while
+### 29. Tuplas
 
-### Saindo de loops com break
-___
-## Seção 7 - Coleções Python
-
-### Listas
-
-### Tuplas
-
-### Dicionários
+### 30. Dicionários
 
 #### _Definição:_
 Um dicionário Python é uma forma de coleção de dados em que se guarda uma chave e um valor correspondente. É similar a um dicionário mesmo, em que há sempre um termo e uma tradução.
@@ -295,8 +329,6 @@ O bom do código dessa forma é que fica muito mais enxuto e não precisamos das
 
 #### Consultado se o elemento está no dicionário pela chave:
 
-
-
 #### 
 
 ### Mapas
@@ -346,21 +378,370 @@ for chave in receita.keys():
 ```
 Essa é inclusive a forma recomendada de fazer a Iteração!
 
+### 31. Mapas
 
+### 32 .Conjuntos
 
+### 33. Módulo Collections - Counter
 
-### Conjuntos
+### 34. Módulo Collections - Default Dict
 
-### Módulo Collections - Counter
+### 35. Módulo Collections - Ordered Dict
 
-### Módulo Collections - Default Dict
+### 36. Módulo Collections - Named Tuple
 
-### Módulo Collections - Ordered Dict
+### 37. Módulo Collections - Deque
 
-### Módulo Collections - Named Tuple
+### 38. Recapitulando
 
-### Módulo Collections - Deque
+___
+## Seção 7: Funções em Python
 
+### 39. O que vamos aprender nesta seção?
+
+### 40. Definindo funções
+
+### 41. Funções com retorno
+
+### Exercício de programação 1: Mão na massa geek
+
+### 42. Funções com parâmetro
+
+### 43. Funções com parâmetro padrão
+
+### 44. Documentando funções com Docstrings
+
+### 45. Entendendo o *args
+
+### 46. Entendendo o *kargs
+
+### 47. Recapitulando
+
+## Seção 8: Comprehensions em Python
+
+### 48. O que vamos aprender nesta seção?
+
+### 49. List Comprehension - parte 1
+
+### 50. List Comprehension - parte 2
+
+### 51. Listas aninhadas
+
+### 52. Dictionary Comprehension
+
+### 53. Set Comprehension
+
+### 54. Recapitulando
+___
+## Seção 9: Expressões Lambdas em Funções Integradas
+
+### 55. O que vamos aprender nesta seção?
+
+### 56. Utilizando lambdas
+
+### 57. Map
+
+### 58. Filter
+
+### 59. Reduce
+
+### 60. Any e All
+
+### 61. Generators
+
+### 62. Sorted
+
+### 63. Min e Max
+
+### 64. Reversed
+
+### 65. Len, Abs, Sum e Round
+
+### 66. Zip
+
+### 67. Recapitulando
+___
+## Seção 10: Debugando e Tratando erros
+
+### 68. O que vamos aprender nesta seção?
+
+### 69. Erros mais comuns em Python
+
+### 70. Levantando so próprios erros com raise
+
+### 71. O bloco Try/Except
+
+### 72. Try, Except, Else e Finally
+
+### 73. Debugando o código com PDB
+
+### 74. Recapitulando
+___
+## Seção 11: Trabalhando com Módulos Python
+
+### 75. O que vamos aprender nessa seção?
+
+### 76. O módulo random
+
+### 77. Trabalhando com módulos Built-in
+
+### 78. Módulos customizados
+
+### 79. Instalando e utilizando módulos externos
+
+### 80. Pacotes
+
+### Recapitulando
+___
+## Seção 12: Leitura e Escrita em Arquivos
+
+### 83. O que vamos aprender nesta seção
+
+### 84. Leitura de arquivos
+
+### 85. Seek e Cursors
+
+### 86. O comando With
+
+### 87. Escrevendo em arquivos
+
+### 88. Modos de arquivos
+
+### 89. StringIO
+
+### 90. Sistema de Arquivos - Navegação
+
+### 91. Sistema de Arquivos - Manipulação
+
+### 92. Recapitulando
+___
+## Seção 13: Iteradores e Geradores Python
+
+### 93. O que vamos aprender nesta seção?
+
+### 94. Entendendo iterators e iteráveis
+
+### 95. Criando sua própria versão de loop
+
+### 96. Escrevendo um Iterador
+
+### 97. Geradores
+
+### 98. Teste de memória com Generators
+
+### 99. Teste de Velocidade com Expressões Geradoras
+
+### 100. Recapitulando
+___
+## Seção 14: Decoradores em Python
+
+### 101. O que vamos aprender nesta seção?
+
+### 102. Funções de maior Grandeza
+
+### 103. O que são decoradores?
+
+### 104. Decoradores com diferentes assinaturas
+
+### 105. Preservando Metadata com Wraps
+
+### 106. Forçando tipos de dados com um decorador
+
+### 107. recapitulando
+___
+## Seção 15: Orientação a Objetos com Python
+
+### 108. O que vamos aprender nesta seção?
+
+### 109. O que é Orientação a objetos?
+
+### 110. Classes
+
+### 111. Atributos
+
+### 112. Métodos
+
+### 113. Objetos
+
+### 114. Abstração
+
+### 115. Recapitulando
+___
+## Seção 16: Herança e Polimorfismo
+
+### 116. O que vamos aprender nesta seção?
+
+### 117. Herança
+
+### 118. Propriedades
+
+### 119. O método super()
+
+### 120. Herança Múltipla
+
+### 121. MRO -Method Resolution Order
+
+### 122. Polimorfismo
+
+### 123. Métidos Mágicos
+
+### 124. Recapitulando
+___
+## Seção 17: Manipulando Arquivos CSV e JSON
+
+### 125. O que vamos aprender nesta seção
+
+### 126. Lendo arquivos CSV
+
+### 127. Escrevando em arquivos CSV
+
+### 128. Conhecendo o Pickle
+
+### 129. Trabalhando com JSON e Pickle
+
+### 130. Recapitulando
+___
+## Seção 18: Trabalhando com Data e Hora em Python
+
+### 131. O que vamos aprender nesta seção
+
+### 132. Manipulando data e hora
+
+### 133. Trabalhando com deltas de data e hora
+
+### 134. Métodos de datas e horas
+
+### 135. Recapiltulando
+___
+## Seção 19: Testes com Python
+
+### 136. O que vamos aprender nesta seção?
+
+### 137. Por que testar nosso código?
+
+### 138. Assertions (afirmações)
+
+### 139. Doctests
+
+### 140. Introdução ao módulo Unittest
+
+### 141. Outros tipos de assertions
+
+### 142. antes e após hooks
+
+### 143. Recapitulando
+___
+## Seção 20: Gerenciamento de Memória em Python
+
+### 144. O que vamos aprender nesta seção?
+
+### 145. Alocação e Gerência de Memória em Python
+
+### 146. GIL - Python Global Interpreter Lock
+
+### 147. Como praticar mais Python? Edabit
+
+### 148. Recapitulando
+___
+## Seção 21: Checagem de Tipos em Python
+
+### 149. O que vamos aprender nesta seção?
+
+### 150. Tipagem de dados Dinâmica x Estática
+
+### 151. Duck Typing
+
+### 152. Type Hinting
+
+### 153. Checagem de Tipos com MyPy
+
+### 154. Prós e Contras do uso de Type Hinging
+
+### 155. Fazendo uso de Annotations
+
+### 156. Tipos em Comentários
+
+### 157. Tipos em Python na Prática
+
+### 158. Recapitulando
+___
+## Seção 22: novos recursos do Python
+
+### 159. O que vamos aprender nesta seção?
+
+### 160. O operador Warlus
+
+### 161. Argumentos somente posicionais
+
+### 162. Tipos de dados mais precisos
+
+### 163. Debugger mais simples com f-strings
+
+### 164. O Conselho do diretor do Python
+
+### 165. Metadata
+
+### 166. Funções Matemáticas e Estatísticas
+
+### 167. Alertas sobre sintaxes perigosas
+
+### 168. Optimizações
+
+### 169. Recapitulando
+___
+## Seção 23: Projeto Python 1 - Game
+
+### 170. O que vamos aprender nesta seção?
+
+### 171. Criando nosso projeto
+
+### 172. Estruturando nosso código
+
+### 173. Implementação - Parte 1
+
+### 174. Implementação - Parte 2
+
+### 175. Executando nosso projeto
+
+### 176. Recapitulando
+___
+## Seção 24: Projeto Python 2 - Mercado
+
+### 177. O que vamos aprender nesta seção?
+
+### 178. Criando nosso projeto
+
+### 179. Estruturando nosso código
+
+### 180. Implementação - Parte 1
+
+### 181. Implementação - Parte 2
+
+### 182. Executando nosso projeto
+
+### 183. Recapitulando
+___
+## Seção 25: Projeto Python 3 - Banco
+
+### 184. O que vamos aprender nesta seção?
+
+### 185. Criando nosso projeto
+
+### 186. Estruturando nosso código
+
+### 187. Implementação - Parte 1
+
+### 188. Implementação - Parte 2
+
+### 189. Executando nosso projeto
+
+### 190. Recapitulando
+___
+## Seção 26: Encerramento
+
+### 191. Recapitulando
+
+### 192. Quais os próximos passos?
 ___
 ## Dicionário Geral de Python:
 
