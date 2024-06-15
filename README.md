@@ -44,17 +44,113 @@ Para programar de forma profissional com o Python, é importante iniciar cada pr
 
 O próprio Python já tem a ferramenta para esse ambiente virtual chamado venv (virtual environments).
 
-Você encontrará o primeiro código criado neste módulo no repositório ***[guppe](https://github.com/Robsonfer/guppe)*** como ***[aula04_teste.py](https://github.com/Robsonfer/guppe/blob/main/aula04_teste.py)***, ou clicando no link com o nome da aula.
+Você encontrará o primeiro código criado neste módulo no repositório ***[guppe](https://github.com/Robsonfer/guppe)*** como ***[aula004_teste.py](https://github.com/Robsonfer/guppe/blob/main/aula004_teste.py)***, ou clicando no link com o nome da aula.
 ___
 ## Seção 2 - Introdução à linguagem Python
 
 ### 5. O que vamos aprender nessa seção?
-Neste tópico é comentado o que será apresentando nesta seção, nada de aula foi mostrado.
+Neste tópico é comentado o que será apresentando nesta seção.
 
 ### 6. PEP8 - Boas Práticas
-Tudo o que você precisar sobre Python poderá ser encontrado dentro do site oficial da linguagem: https://www.python.org/
+***IMPORTANTE:*** Tudo o que você precisar sobre Python poderá ser encontrado dentro do site oficial da linguagem: https://www.python.org/ e durante o decorrer deste documento, serão disponibilizados links diretos para o assunto em questão como por exemplo, para esta aula, o ***[PEP8](https://wiki.python.org.br/GuiaDeEstilo)***
 
-Durante o decorrer deste documento, serão disponibilizados links diretos para o assunto em questão como por exemplo, para esta aula, o ***[PEP8](https://wiki.python.org.br/GuiaDeEstilo)***
+O **PEP8 - Python Enhancement Proposal** são propostas de melhoria para a linguagem Python.
+
+A ideia da PEP8 é que possamos escrever códigos Python de forma Pythônica.
+
+The Zen of Python: import this
+
+1. Utilize Camel Case para nomes de classes:
+```
+class Calculadora:
+    pass
+class CalculadoraCientifica:
+    pass
+ ```
+
+2. Utilize nomes em minúsculo, separados por underline para funções ou variáveis:
+```
+def soma():
+    pass
+def soma_dois():
+    pass
+numero = 4
+numero_impar = 5
+```
+
+3. Utilize 4 espaços para identação (NÃO use tab):
+```
+if 'a' in 'banana':
+    print('tem')
+```
+
+4. Linhas em branco:
+ - Separar funções e definições de classe com duas linhas em branco.
+ - Métodos dentro de uma classe deve ser serarado com uma única linha em branco.
+
+5. Imports:
+ - Imports devem ser sempre feitos em linhas separadas:
+```
+# Import errado:
+import sys, os
+
+# Import certo:
+import sys
+import os
+
+# Não tem problemas em utilizar:
+from types import StringType, ListType
+
+# Caso tenha muitos imports de um mesmo pacote, recomenda-se fazer assim:
+from types import (
+    StringType,
+    ListType,
+    SetType,
+    OutroType
+)
+```
+
+- imports devem ser colocados no topo do arquivo, logo depois de quaisquer comentários ou docstrings e antes de
+ constantes ou variáveis globais.
+
+6. Espaços em expressões e instruções:
+
+- Não faça:
+`funcao( algo[ 1 ], { outro: 2 } )`
+
+- Faça:
+`funcao(algo[1], {outro: 2})`
+
+
+- Não faça:
+`algo (1)`
+
+- Faça:
+`algo(1)`
+
+
+- Não faça:
+`dict ['chave'] = list [indice]`
+
+- Faça:
+`dict['chave'] = list[indice]`
+
+
+- Não faça:
+```
+x              = 1
+y              = 2
+variavel_longa = 3
+```
+
+- Faça:
+```
+x = 1
+y = 2
+variavel_longa = 3
+```
+
+7. Termine sempre uma instrução com uma nova linha
 
 ### 7. Dir e Help
 
