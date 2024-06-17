@@ -191,7 +191,33 @@ O resultado do comando `help(num)` é tão grande que não faz sentido ser coloc
 O código dessa aula pode ser encontrado clicando aqui: [aula007_dir_e_help.py](https://github.com/Robsonfer/guppe/blob/main/aula007_dir_e_help.py)
 
 ### 8. Recebendo dados do usuário
+Para receber dados do teclado nós utilizamos o comando `input()`. Por exemplo:
 
+Input de dados:
+`nome = input('Qual é o seu nome? ')`
+
+Saída de dados:
+`print(f'Seja bem vindo(a) {nome}')`
+
+Retorno no console Python:
+`Seja bem vindo(a) Robson`
+
+E podemos continuar o diálogo colocando mais um input de dados:
+`idade = int(input('Qual é a sua idade? '))`
+
+E configurando a saída:
+```
+print(f'Que legal {nome}, {idade} anos é uma ótima idade!')
+ano = 2023 - idade #Cast - conversão de um tipo de dado para outro
+print(f'Você nasceu em {ano}. Este foi um ano incrível!')
+```
+Retorno no console Python:
+```
+Qual é a sua idade? 43
+Que legal Robson, 43 anos é uma ótima idade!
+Você nasceu em 1980. Este foi um ano incrível!
+```
+O código dessa aula pode ser encontrado clicando aqui: [aula008_recebendo_dados_usuario.py](https://github.com/Robsonfer/guppe/blob/main/aula008_recebendo_dados_usuario.py)
 
 ### 9. Recapitulando
 ___
