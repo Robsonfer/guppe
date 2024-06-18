@@ -208,18 +208,33 @@ E podemos continuar o diálogo colocando mais um input de dados:
 E configurando a saída:
 ```
 print(f'Que legal {nome}, {idade} anos é uma ótima idade!')
-ano = 2023 - idade #Cast - conversão de um tipo de dado para outro
+ano = 2023 - idade
 print(f'Você nasceu em {ano}. Este foi um ano incrível!')
 ```
+
+**_OBS IMPORTANTE_: Note que ao receber valores através do input para a variável idade, nós fazemos um Cast que nada mais é do que a conversão de um tipo de dado para outro:**
+
+`idade = int(input('Qual é a sua idade? '))`
+
+E por que precisamos fazer esse cast?
+- Em primeiro lugar, é importante saber que toda recepção de dados via input, sempre acontecerá no formato string. Mesmo que armazerar este input em uma variável, ele será sempre uma string.
+- Portanto, sempre que for necessário receber um valor que não seja no formato string, será necessário fazer o cast. Que é o caso da variável idade, pois desejamos logo em seguida realizar um cálculo com ela, o que não aconteceria se fosse uma string.
+
 Retorno no console Python:
 ```
 Qual é a sua idade? 43
 Que legal Robson, 43 anos é uma ótima idade!
 Você nasceu em 1980. Este foi um ano incrível!
 ```
+
+**_OBS_**: Durante toda essa aula eu utilizei o formato moderno de print dinâmico que é `print(f'Olá {nome}')`. Esse formato é o mais atual e surgiu a já na versão 3 do Python, assim como a versão `print('Olá {0}' .format(nome))` enquanto a versão `print('Olá %s' %nome)` era utilizado na versão 2 do Python. Os três formatos funcionam, mas é recomendado com boa prática utilizar sempre a forma mais atual.
+
+É muito importante conhecer os três formatos, pois podemos nos deparar com algum código antigo para dar manutenção e nesse momento não precisamos entendê-lo.
+
 O código dessa aula pode ser encontrado clicando aqui: [aula008_recebendo_dados_usuario.py](https://github.com/Robsonfer/guppe/blob/main/aula008_recebendo_dados_usuario.py)
 
 ### 9. Recapitulando
+
 ___
 ## Seção 3: Variáveis e Tipos de Dados em Python
 
