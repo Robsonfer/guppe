@@ -50,7 +50,10 @@ ___
 ## Seção 2 - Introdução à linguagem Python
 
 ### 5. O que vamos aprender nessa seção?
-Neste tópico é comentado o que será apresentando nesta seção.
+- PEP8;
+- Dir;
+- Help;
+- Recebendo dados do usuário.
 
 ### 6. PEP8 - Boas Práticas
 ***IMPORTANTE:*** Tudo o que você precisar sobre Python poderá ser encontrado dentro do site oficial da linguagem: https://www.python.org/ e durante o decorrer deste documento, serão disponibilizados links diretos para o assunto em questão como por exemplo, para esta aula, o ***[PEP8](https://wiki.python.org.br/GuiaDeEstilo)***
@@ -161,8 +164,7 @@ O código dessa aula pode ser encontrado aqui: [aula006_pep8.py](https://github.
 São utilitários Python para auxiliar na programação:
 
 - Dir = Apresenta todos os atributos/propriedades, funções/métodos disponíveis para determinado tipo de dado ou variável.
-- Help = Apresenta a documentação/Como utilizar os atribuos/propriedades e funções/métodos disponíveis para determinado
-tipo de dado ou variável.
+- Help = Apresenta a documentação/Como utilizar os atribuos/propriedades e funções/métodos disponíveis para determinado tipo de dado ou variável.
 
 Exemplo do uso de dir():
 
@@ -234,13 +236,92 @@ Você nasceu em 1980. Este foi um ano incrível!
 O código dessa aula pode ser encontrado clicando aqui: [aula008_recebendo_dados_usuario.py](https://github.com/Robsonfer/guppe/blob/main/aula008_recebendo_dados_usuario.py)
 
 ### 9. Recapitulando
-
+Nesta seção aprendemos:
+- PEP8: Como escrever códigos Pythônicos, ou seja, bonitos, práticos e da forma correta;
+- Dir e Help: Recursos utilitários do Python:
+  - Dir: Mostra a listagem do que é possível utilizar com determinado tipo de dado;
+  - Help: Mostra a documentação destes recursos.
+- Recebendo dados do usuário: Como receber dados via teclado e formatá-los conforme a sua necessidade. Destaque para o recurso de Cast.
 ___
 ## Seção 3: Variáveis e Tipos de Dados em Python
 
 ### 10. O que vamos aprender nessa seção?
+- O tipo numérico;
+- O tipo float;
+- O tipo boolean;
+- O tipo string;
+- Escopo de variáveis.
 
 ### 11. O tipo numérico
+O tipo numérico basicamente é tipo de variável de operações e quantificações matemáticas calculáveis.
+
+Operações com o tipo numérico:
+
+**Soma**: `5 + 2`
+Retorno: `7`
+
+**Subtração**: `7 - 2`
+Retorno: `5`
+
+**Multiplicação**: `3 * 5`
+Retorno: `15`
+
+**Divisão**: `5 / 2`
+Retorno: `2.5`
+
+Mas e se eu quiser ter somente a parte inteira da divisão acima? Devemos então fazer o cast?
+
+```
+divisao = int(5 / 2)
+print(divisao)
+```
+Saída no console Python: `2`
+
+Em Python para divisão retornar somente o valor inteiro não precisamos fazer cast, basta usar //: `print(5 // 2)`
+
+Saída no console Python: `2`
+
+E se quisermos obter então o resto da divisão, usamos o módulo %: `print(5 % 2)`
+
+Saída no console Python: `1`
+
+**_DICA_**: Este é um recurso muito utilizado na programação, pois é dessa forma que conseguimos distinguir números pares de números ímpares. Todo módulo de um número par resultará em zero, enquanto que todo módulo de um número ímpar resultará em 1!  
+
+**Potenciação**: `5 ** 2` (cinco elevado ao quadrado)
+Retorno: `25`
+
+**_CURIOSIDADE_**: Em Java o tipo inteiro suporta até `2 ** 64`, mas um Byte ele reserva para o sinal, portanto o maior número inteiro que podemos armazenar em Java é `9223372036854775808`. Já no Python não existe essa limitação. Basicamente o seu limite é a sua memória. Enquanto seu computador tiver memória, o seu número pode crescer.
+
+Outra coisa interessante no Python é que quando temos um número muito grande, podemos facilitar a visualização separando cada milhar do número por _underlines_ sem prejuízo de interpretação da linguagem, por exemplo:
+
+Usando `1000000000` ou `1_000_000_000`, o Python entenderá o que está escrito. Se jogar no console da linguagem ele retornará o valor correto sem _underlines_.
+
+Também podemos realizar operações com variáveis numéricas. Por exemplo:
+
+```
+num = 42
+print(num + 1)
+```
+Retorno no console Python: `43`
+
+**_DICA_**: Outro recurso muito utilizado nas linguagens de programação é a iteração, ou seja, a soma de uma unidade a uma variável:
+
+Podemos somar fazer a variável receber o valor somado de mais um, ou seja, iteramos uma vez:
+```commandline
+num = 42
+num = num + 1
+```
+Retorno no console Python: `43`
+Traduzindo, num recebe ele mesmo + 1
+
+Ainda assim, existe uma forma mais curta para fazer isso:
+```commandline
+num = 42
+num += 1
+```
+Retorno no console Python: `43`
+
+O `+=` faz exatamente o papel da expressão "ele mesmo +".
 
 ### 12. O tipo float
 
@@ -251,6 +332,11 @@ ___
 ### 15. Escopo de variáveis
 
 ### 16. Recapitulando
+- O tipo numérico:
+- O tipo float:
+- O tipo boolean:
+- O tipo string:
+- Escopo de variáveis:
 
 ## Seção 4: Estruturas Lógicas e Condicionais em Python
 
