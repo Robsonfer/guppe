@@ -21,3 +21,5 @@ print(divisao)
 # Podemos também descobrir qual é o resto da divisão usando %:
 print(4 % 2)
 print(5 % 2)
+
+

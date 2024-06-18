@@ -304,14 +304,15 @@ print(num + 1)
 ```
 Retorno no console Python: `43`
 
-**_DICA_**: Outro recurso muito utilizado nas linguagens de programação é a iteração, ou seja, a soma de uma unidade a uma variável:
+**_DICA_**: Outro recurso muito utilizado nas linguagens de programação é a operação matemática seguida da alimentação da mesma variável da operação:
 
-Podemos somar fazer a variável receber o valor somado de mais um, ou seja, iteramos uma vez:
+Podemos fazer a variável receber o valor dela mesma somado de mais uma unidade:
 ```commandline
 num = 42
 num = num + 1
 ```
 Retorno no console Python: `43`
+
 Traduzindo, num recebe ele mesmo + 1
 
 Ainda assim, existe uma forma mais curta para fazer isso:
@@ -323,7 +324,28 @@ Retorno no console Python: `43`
 
 O `+=` faz exatamente o papel da expressão "ele mesmo +".
 
+O mesmo serve para `num -= num`, `num *= num`, `num /= num`, `num //= num` ou `num %= num` 
+
+Este recurso é interesante para criar contadores, e a partir daí pode-se fazer muitas outras coisas, como a criação de um número automático de cadastro ou a iteração em itens de uma lista onde cada soma de número chama o próximo já existente. As possibilidadese são infinitas.
+
+Uma forma de itentificar qual é o tipo de uma variável ou valor, podemos utilizar a função `type()` que nos dá qual é o tipo:
+
+```commandline
+>>> type(num)
+<class 'float'>
+```
+Ou:
+```commandline
+>>> type(23)
+<class 'int'>
+```
+
+**_OBS_**: O formato demonstrado acima é o memso formato exibido no console Python onde já temos a digitação do comando e resposta automática abaixo sem precisar chamar o resultado com um print.
+
+O código dessa aula pode ser encontrado clicando aqui: [aula011_tipo_numerico.py](https://github.com/Robsonfer/guppe/blob/main/aula011_tipo_numerico.py)
+
 ### 12. O tipo float
+
 
 ### 13. O tipo boolean
 
