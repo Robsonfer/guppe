@@ -345,6 +345,10 @@ Ou:
 O código dessa aula pode ser encontrado clicando aqui: [aula011_tipo_numerico.py](https://github.com/Robsonfer/guppe/blob/main/aula011_tipo_numerico.py)
 
 ### 12. O tipo float
+O tipo float, também conhecido como real ou decimal é o tipo numérico de ponto flutuante.
+
+**_OBS_**: Importante lembrar que como o sistema seguido pelas linguagens de programação é o sistema americano, o separador das casas decimais é o ponto e não a vírgula.
+
 
 
 ### 13. O tipo boolean
