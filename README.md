@@ -45,7 +45,7 @@ Para programar de forma profissional com o Python, é importante iniciar cada pr
 
 O próprio Python já tem a ferramenta para esse ambiente virtual chamado venv (virtual environments).
 
-Você encontrará o primeiro código criado neste módulo no repositório ***[guppe](https://github.com/Robsonfer/guppe)*** como ***[aula004_teste.py](https://github.com/Robsonfer/guppe/blob/main/aula004_teste.py)***, ou clicando no link com o nome da aula.
+**Você encontrará o primeiro código criado neste módulo no repositório ***[guppe](https://github.com/Robsonfer/guppe)*** como ***[aula004_teste.py](https://github.com/Robsonfer/guppe/blob/main/aula004_teste.py)***, ou clicando no link com o nome da aula.**
 ___
 ## Seção 2 - Introdução à linguagem Python
 
@@ -158,7 +158,7 @@ variavel_longa = 3
 
 É importante lembrar que o Pycharm é a IDE adotada como oficial para o Python, portanto ela tem ferramentas exclusivas que outras IDEs não têm como por exemplo avisos quando fugimos dos padrões da PEP8.
 
-O código dessa aula pode ser encontrado aqui: [aula006_pep8.py](https://github.com/Robsonfer/guppe/blob/main/aula006_pep8.py) 
+**O código dessa aula pode ser encontrado aqui: [aula006_pep8.py](https://github.com/Robsonfer/guppe/blob/main/aula006_pep8.py)** 
 
 ### 7. Dir e Help
 São utilitários Python para auxiliar na programação:
@@ -190,7 +190,7 @@ help(num)
 
 O resultado do comando `help(num)` é tão grande que não faz sentido ser colocado aqui, mas basicamente ele mostra toda a documentação do que for consultado dentro do `help()`.
 
-O código dessa aula pode ser encontrado clicando aqui: [aula007_dir_e_help.py](https://github.com/Robsonfer/guppe/blob/main/aula007_dir_e_help.py)
+**O código dessa aula pode ser encontrado clicando aqui: [aula007_dir_e_help.py](https://github.com/Robsonfer/guppe/blob/main/aula007_dir_e_help.py)**
 
 ### 8. Recebendo dados do usuário
 Para receber dados do teclado nós utilizamos o comando `input()`. Por exemplo:
@@ -233,7 +233,7 @@ Você nasceu em 1980. Este foi um ano incrível!
 
 É muito importante conhecer os três formatos, pois podemos nos deparar com algum código antigo para dar manutenção e nesse momento não precisamos entendê-lo.
 
-O código dessa aula pode ser encontrado clicando aqui: [aula008_recebendo_dados_usuario.py](https://github.com/Robsonfer/guppe/blob/main/aula008_recebendo_dados_usuario.py)
+**O código dessa aula pode ser encontrado clicando aqui: [aula008_recebendo_dados_usuario.py](https://github.com/Robsonfer/guppe/blob/main/aula008_recebendo_dados_usuario.py)**
 
 ### 9. Recapitulando
 Nesta seção aprendemos:
@@ -307,7 +307,7 @@ Retorno no console Python: `43`
 **_DICA_**: Outro recurso muito utilizado nas linguagens de programação é a operação matemática seguida da alimentação da mesma variável da operação:
 
 Podemos fazer a variável receber o valor dela mesma somado de mais uma unidade:
-```commandline
+```
 num = 42
 num = num + 1
 ```
@@ -316,7 +316,7 @@ Retorno no console Python: `43`
 Traduzindo, num recebe ele mesmo + 1
 
 Ainda assim, existe uma forma mais curta para fazer isso:
-```commandline
+```
 num = 42
 num += 1
 ```
@@ -330,28 +330,168 @@ Este recurso é interesante para criar contadores, e a partir daí pode-se fazer
 
 Uma forma de itentificar qual é o tipo de uma variável ou valor, podemos utilizar a função `type()` que nos dá qual é o tipo:
 
-```commandline
+```
 >>> type(num)
 <class 'float'>
 ```
 Ou:
-```commandline
+```
 >>> type(23)
 <class 'int'>
 ```
 
 **_OBS_**: O formato demonstrado acima é o memso formato exibido no console Python onde já temos a digitação do comando e resposta automática abaixo sem precisar chamar o resultado com um print.
 
-O código dessa aula pode ser encontrado clicando aqui: [aula011_tipo_numerico.py](https://github.com/Robsonfer/guppe/blob/main/aula011_tipo_numerico.py)
+**O código dessa aula pode ser encontrado clicando aqui: [aula011_tipo_numerico.py](https://github.com/Robsonfer/guppe/blob/main/aula011_tipo_numerico.py)**
 
 ### 12. O tipo float
 O tipo float, também conhecido como real ou decimal é o tipo numérico de ponto flutuante.
 
 **_OBS_**: Importante lembrar que como o sistema seguido pelas linguagens de programação é o sistema americano, o separador das casas decimais é o ponto e não a vírgula.
 
+Exemplo:
 
+Se usarmos vírgula como no exemplo abaixo, estamos criando uma tupla e não um tipo float:
+```
+valor = 1, 44
+print(valor)
+```
+Inclusive, o Python não aceita `valor = 1,44`, pois dará um erro de PEP8. Como ele está entendendo que estamos separando um número do outro, a boa prática conforme o PEP8 é dar um espaço entre a vírgula e o próximo número declarado. O correto seria `valor = 1, 44` para gerar a tupla.
+
+Saída no console Python:
+`(1, 44)`
+
+E para gerar um tipo float, o correto é assim com ponto:
+```
+valor = 1.44
+print(valor)
+print(type(valor))
+```
+Saída no console Python:
+```
+1.44
+<class 'float'>
+```
+É possível fazer dupla atribuição. Exemplo:
+```
+valor1, valor2 = 1, 44
+print(valor1)
+print(type(valor1))
+print(valor2)
+print(type(valor2))
+```
+Saída no console Python:
+```
+1
+<class 'int'>
+44
+<class 'int'>
+```
+**_OBS IMPORTANTE_**: A dupla atribuição não é exclusiva do tipo float, mas foi demonstrado agora devido ao modo como a sentença `1, 44` foi escrita.
+
+Todas as operações matemáticas estudadas com o tipo int, podemos realizar com o tipo float.
+
+E como já foi visto antes na aula onde aprendemos a receber dados do usuário, é possível converter um tipo float para um tipo int. Exemplo:
+```
+valor = 1.44
+resultado = (int(valor))
+print(resultado)
+print(type(resultado))
+```
+Saída no console Python:
+```
+1
+<class 'int'>
+```
+Note que o Python retornou a parte inteira do número decimal, resultado da conversão do tipo float para o tipo inteiro (cast). O problema reside na perda de precisão.
+
+Podemos também trabalhar com números complexos. O número complexo é representado pela junção com a letra j:
+```
+num_complex = 5j
+print(num_complex)
+print(type(num_complex))
+teste = num_complex ** 2
+print(teste)
+print(type(teste))
+```
+Saída no console Python:
+```
+5j
+<class 'complex'>
+(-25+0j)
+<class 'complex'>
+```
+
+**O código dessa aula pode ser encontrado clicando aqui: [aula012_tipo_float.py](https://github.com/Robsonfer/guppe/blob/main/aula012_tipo_float.py)**
 
 ### 13. O tipo boolean
+O tipo boolena ou booleano vem da Álgebra de Boole e tem sempre duas constantes, verdadeiro ou falso. Na linguagem Python, True ou False. Sempre com a inicial maíuscula. Diferente disso, o Python não entenderá.
+
+Usa-se este tipo para realizar operações básicas de duas posições, por exemplo, ligado ou desligado, ativo ou inativo, com sinal ou sem sinal.
+
+#### 13.1. Operações Básicas: ####
+- Negação (not)
+
+A negação torna o valor booleano o inverso. Se for `True`, com a negação o valor alterna para `False` e se for `False`, alterna para `True`.
+```
+ativo = False
+print(ativo)
+```
+Saída no console Python: `False`
+```
+ativo = False
+print(not ativo)
+```
+Saída no console Python: `True`
+- Ou (or)
+
+É uma operação binária e depende de dois valores. O `or` retona um resultado comparativo entre duas variáveis booleanas e para que o resultado disso seja `True` é preciso que pelo menos uma das duas posições comparadas seja `True`:
+```
+x = True
+y = False
+z = x or y
+print(z)
+```
+Saída no console Python: `True`
+```
+x = False
+y = False
+z = x or y
+print(z)
+```
+Saída no console Python: `False`
+
+Desta forma, de quatro combinações possíveis, só uma resultará em `False`.
+
+- E (and)
+
+Da mesma forma que o `or`, o `and` é uma operação binária que faz a comparação entre dois valores. No caso do `and`, para que o resultado seja `True`, é necessário que os dois valores sejam `True`:
+```
+x = True
+y = False
+z = x or y
+print(z)
+```
+Saída no console Python: `False`
+```
+x = False
+y = False
+z = x or y
+print(z)
+```
+Saída no console Python: `False`
+```
+x = True
+y = True
+z = x or y
+print(z)
+```
+Saída no console Python: `True`
+
+Desta forma, de quatro combinações possíveis, só uma resultará em `True`.
+
+
+
 
 ### 14. O tipo string
 
