@@ -490,10 +490,46 @@ Saída no console Python: `True`
 
 Desta forma, de quatro combinações possíveis, só uma resultará em `True`.
 
+- Maior `>`, Menor `<`, Igual `==` e Diferente `!=`
 
-
+Ainda operando com o tipo booleano temos as operações com Maior representando pelo símbolo matemático `>`, o Menor representado pelo símbolo matermático `<`, o Igual representado por `==` e por fim o Diferente representado por `!=`. Podemos entender melhor essas operação e esses operadores se partirmos direto para o console do Python onde basta digitar que o Python responde automaticamente:
+```
+>>> 5 > 6
+False
+>>> 5 < 6
+True
+>>> 6 == 6
+True
+>>> 4<= 5
+True
+>>> 5 != 6
+True
+```
+O mesmo pode ser feito utilizando-se de variáveis:
+```
+>>> num1 = 7
+>>> num2 = 8
+>>> num1 >= num2
+False
+>>> num1 == num2
+False
+>>> num1 < num2 or num1 > 3
+True
+>>> num1 < num2 and num1 > 3
+True
+```
+E se consultarmos os tipos:
+```
+>>> type(True)
+<class 'bool'>
+>>> type(False)
+<class 'bool'>
+```
+**O código dessa aula pode ser encontrado clicando aqui: [aula013_tipo_boolean.py](https://github.com/Robsonfer/guppe/blob/main/aula013_tipo_boolean.py)**
 
 ### 14. O tipo string
+
+
 
 ### 15. Escopo de variáveis
 
