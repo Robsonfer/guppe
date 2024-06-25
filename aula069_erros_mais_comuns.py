@@ -10,6 +10,12 @@ Os erros mais comum:
 2 - NameError -> Ocorre quando uma variável ou função não foi definida.
 
 3 - TyoeError -> Ocorre quando uma função/operação/ação é aplicada a um tipo errado.
+
+4 - IndexError -> Ocorre quando tentamos acessar um elemento em uma lista ou outro tipo de dado indexado utilizando um índice inválido.
+
+5 - ValueError -> Ocorre quando uma função/operação built-in (integrada) recebe um argumento com tipo correto mas valor inapropriado.
+
+6 - KeyError -> Ocorre quando tentamos acessar um dicionário com uma chave que não existe.
 """
 
 # Exemplos de SyntaxError:
@@ -57,4 +63,37 @@ print(msg)
 # Exemplo 1:
 # print(len(5))
 # TypeError: object of type 'int' has no len() (A função len é para tipos iteráveis, quando usamos em um tipo que não é iterável como é o caso do exemplo acima, temos o erro de tipo)
+
+# Exemplo 2:
+# print('Geek' + [])
+# TypeError: can only concatenate str (not "list") to str (Não podemos concatenar uma string e uma lista)
+
+# Exemplo 3:
+# print('Geek' + 4)
+# TypeError: can only concatenate str (not "list") to str (Não podemos concatenar uma string e um número. Só funcionaria fazendo cast de int para string)
+
+# Exemplos de IndexError
+
+# Exemplo 1:
+lista = ['Geek']
+# print(lista[1])
+# IndexError: list index out of range (Em nossa lista só existe item no índice 0, não existe índice 1)
+
+# Exemplo 2:
+print(lista[0][0]) # Imprimindo o índice 0 ('Geek'), mas só a posição 0 ('G')
+# print(lista[0][10])
+# IndexError: string index out of range (Em nossa lista o item do índice zero só tem 4 letras, portanto não tem posição 10)
+
+# Exemplos de ValueError
+
+# Exemplo 1:
+# print(int('Geek'))
+# ValueError: invalid literal for int() with base 10: 'Geek' (O cast int() espera receber como entrada uma string, então o argumento está correto, entretanto o valor é inapropriado, pois não é possível converter este valor "Geek" em um int)
+
+# Exemplos de KeyError
+
+# Exemplo 1:
+dict = {}
+# print(dict['Geek'])
+# KeyError: 'Geek' (Estamos tentando acessar uma chave inexistente no dicionário em questão)
 
