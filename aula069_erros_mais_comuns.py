@@ -16,6 +16,16 @@ Os erros mais comum:
 5 - ValueError -> Ocorre quando uma função/operação built-in (integrada) recebe um argumento com tipo correto mas valor inapropriado.
 
 6 - KeyError -> Ocorre quando tentamos acessar um dicionário com uma chave que não existe.
+
+7 - AttributeError -> Ocorre quando uma variável não tem um atributo/função.
+
+8 - IndentationError -> Ocorre quando não respeitamos a indentação do Python (4 espaços).
+
+LINK DA DOCUMENTAÇÃO DO PYTHON SOBRE OS ERROS: https://docs.python.org/3/library/exceptions.html#base-classes
+
+OBS IMPORTANTES:
+ - Exceptions e Erros são sinônimos na programação;
+ - É importante ler e prestar atenção na saída de erro.
 """
 
 # Exemplos de SyntaxError:
@@ -93,7 +103,30 @@ print(lista[0][0]) # Imprimindo o índice 0 ('Geek'), mas só a posição 0 ('G'
 # Exemplos de KeyError
 
 # Exemplo 1:
-dict = {}
+dict = {'python': 'University'}
 # print(dict['Geek'])
 # KeyError: 'Geek' (Estamos tentando acessar uma chave inexistente no dicionário em questão)
 
+# Exemplos de AttributeError
+
+# Exemplo 1:
+tupla = (11, 2, 31, 4)
+# print(tupla.sort())
+# AttributeError: 'tuple' object has no attribute 'sort' (Não existe a função sort() para o tipo de dado tuple. O sort() é exclusivo para uso em listas)
+
+# Exemplos de IndentationError
+
+# Exemplo 1:
+"""
+def nova():
+print('Geek')
+"""
+# IndentationError: expected an indented block after function definition on line 114 (Logo após a definição de uma função, a primeira linha de código sempre tem uma indentação)
+
+# Exemplo 2:
+"""
+for i in range(10):
+i + 1
+print(i)
+"""
+# IndentationError: expected an indented block after function definition on line 114
