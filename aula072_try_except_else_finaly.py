@@ -57,16 +57,39 @@ except NameError:
 
 
 # Exemplo mais complexo Correto:
+
+# OBS: Você é responsável pelas entradas das suas funções, então trate-as.
+
+"""
 def dividir(a, b):
-    return a / b
+    try:
+        return float(a) / float(b)
+    except ValueError:
+        return 'ATENÇÃO! Valor incorreto. Tente um valor numérico.'
+    except ZeroDivisionError:
+        return  'ATENÇÃO! Não existe divisão por zero. Tente novamente.'
 
-try:
-    num1 = int(input('Informe o primeiro número: '))
-    num2 = int(input('Informe o segundo número: '))
-except ValueError:
-    print('ATENÇÃO! O valor precisa ser numérico!')
+num1 = (input('Informe o primeiro número: '))
+num2 = (input('Informe o segundo número: '))
 
-try:
-    print(dividir(num1, num2))
-except NameError:
-    print('ATENÇÃO! O valor precisa ser numérico!')
+print(dividir(num1, num2))
+"""
+
+
+"""
+Da mesma forma que os erros são tratados de maneira específica no caso acima, podemos também tratar de forma genérica.
+É sempre melhor tratar os erros de forma específica, pois ajuda muito mais o usuário em relação ao erro.
+Mas como vamos mostrar abaixo, podemos tratar de maneira semi genérica:
+"""
+
+# Forma semi-genérica de tratar os erros:
+def dividir(a, b):
+    try:
+        return float(a) / float(b)
+    except (ValueError, ZeroDivisionError) as err:
+        return f'WARNING! {err}.'
+
+num1 = (input('Informe o primeiro número: '))
+num2 = (input('Informe o segundo número: '))
+
+print(dividir(num1, num2))
