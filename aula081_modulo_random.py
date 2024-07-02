@@ -92,4 +92,31 @@ print('-- Gerando números aleatórios para uma aposta na mega-sena com randint(
 from random import randint
 
 for i in range(6):
-    print(randint(1, 61), end=' ')
+    print(randint(1, 61), end=' ') # Começa em 1 e vai até 60
+print('')
+
+print('-- Gerando jogadas aleatórias de joquempô com choice() --')
+# Função choice() - Mostra um valor aleatório entre um iterável:
+from random import choice
+
+jogadas = ['pedra', 'papel', 'tesoura']
+
+print(choice(jogadas))
+
+print('-- Gerando valores aleatórios de uma string com choice() --')
+# Se fizermos a mesmas coisa com uma string:
+print(choice('Geek University'))
+
+
+print('------------- Embaralhando dados com shuffle() -------------')
+# Função Shuffle() - Tem a função de embaralhar dados:
+from random import shuffle
+
+cartas = ['A', 'K', 'Q', 'J', '10', '9', '8', '7', '6', '5', '4', '3', '2']
+
+print(cartas)
+shuffle(cartas)
+print(cartas)
+
+print('-- Tirando uma carta do baralho e mostrando com shuffle() --')
+print(cartas[5])
