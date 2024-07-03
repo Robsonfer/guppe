@@ -46,4 +46,23 @@ print(rdi(5, 89))
 from random import randint as rdi, random as rdm
 print(rdm())
 """
+# É muito importante que o alias não pode coincidir com palavras reservadas ou nomes de funções e afins
 
+# Importando vários módulos no mesmo import.
+# É uma boa prática colocar entre parênteses e um em cada linha:
+from random import (
+    random,
+    randint,
+    shuffle,
+    choice
+)
+
+print(random())
+
+print(randint(3, 7))
+
+lista = ['Geek', 'University', 'Python']
+shuffle(lista)
+print(lista)
+
+print(choice('University'))
