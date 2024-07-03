@@ -26,10 +26,24 @@ https://docs.python.org/3/py-modindex.html
 # Utilizando alias (apelidos) para módulos/funções
 """
 import random as rdm
-
 print(rdm.random())
 """
 
 # Podemos importar todas as funções de um módulo utilizando o *
+"""
 from random import *
+print(random())
+"""
+
+# Utilizando apelidos para funções:
+"""
+from random import randint as rdi
+print(rdi(5, 89))
+"""
+
+# O mesmo para duas funções:
+"""
+from random import randint as rdi, random as rdm
+print(rdm())
+"""
 
