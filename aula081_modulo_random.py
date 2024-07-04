@@ -56,6 +56,7 @@ DICA: Se estiver no Pycharm, pode segurar o botão Ctrl e clicar em cima da pala
 
 # Forma 2 - Importando uma função específica do módulo (Forma recomendada):
 from random import random
+
 # Traduzindo: Do módulo random, importe a função random()
 
 # Exemplo:
@@ -64,9 +65,12 @@ for i in range(10):
     print(random())
 
 print('--------- Gerando número aleatório de 0 a 100 com random() ---------')
+
+
 # Gerando um número aleatório de 0 a 100:
 def gera_aleatorio():
     print(round(random() * 100))
+
 
 gera_aleatorio()
 
@@ -75,14 +79,17 @@ from random import uniform
 
 print('--------------------- Exemplo usando uniform() --------------------')
 for i in range(10):
-    print(uniform(3, 7)) # O 7 não é incluído!
+    print(uniform(3, 7))  # O 7 não é incluído!
 # O uniform() é um random que vc escolhe o início e o fim do range de números. Se usar 0 e 1 é idêntico ao random
 
 
 print('-------- Gerando número aleatório de 0 a 100 com uniform() --------')
+
+
 # Gerando um número aleatório de 0 a 100:
 def gera_aleatorio_uniform():
     print(round(uniform(1, 101)))
+
 
 gera_aleatorio_uniform()
 
@@ -92,7 +99,7 @@ print('-- Gerando números aleatórios para uma aposta na mega-sena com randint(
 from random import randint
 
 for i in range(6):
-    print(randint(1, 61), end=' ') # Começa em 1 e vai até 60
+    print(randint(1, 61), end=' ')  # Começa em 1 e vai até 60
 print('')
 
 print('-- Gerando jogadas aleatórias de joquempô com choice() --')
@@ -106,7 +113,6 @@ print(choice(jogadas))
 print('-- Gerando valores aleatórios de uma string com choice() --')
 # Se fizermos a mesmas coisa com uma string:
 print(choice('Geek University'))
-
 
 print('------------- Embaralhando dados com shuffle() -------------')
 # Função Shuffle() - Tem a função de embaralhar dados:
