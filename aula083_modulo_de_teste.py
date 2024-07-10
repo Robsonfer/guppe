@@ -31,7 +31,9 @@ cidades = [('Berlin', 29), ('Cairo', 36), ('Buenos Aires', 19), ('Los Angeles', 
 # Fórmula: f = 9/5 * c  + 32
 c_to_f = lambda dado: (dado[0], (9/5) * dado[1] + 32)
 
+if __name__ == '__main__':
+    lista = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    print(soma_impares(lista))
 
-lista = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-tupla = (1, 3, 5, 7, 9, 11, 13, 15)
+    tupla = (1, 3, 5, 7, 9, 11, 13, 15)
+    print(soma_impares(tupla))
