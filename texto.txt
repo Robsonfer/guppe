@@ -1,6 +1,6 @@
 Eu estou estudando na Geek University e estou aprendendo muito no curso de Programacao em Python: Essencial.
-Segunda linha
-Terceira linha
-Quarta linha
-Quinta linha
-Sexta linha
+Este curso está me ajudando a ficar expert em Python.
+Neste momento, eu estou aprendendo a trabalhar com arquivos.
+Outras coisas escritas
+Novamente vamos
+Ainda estamos escrevendo
