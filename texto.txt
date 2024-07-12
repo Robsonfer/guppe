@@ -1,1 +1,6 @@
 Eu estou estudando na Geek University e estou aprendendo muito no curso de Programacao em Python: Essencial.
+Segunda linha
+Terceira linha
+Quarta linha
+Quinta linha
+Sexta linha
