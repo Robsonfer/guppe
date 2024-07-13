@@ -20,12 +20,19 @@ Passos para se trabalhar com um arquivo:
 2 - Trabalhar o arquivo;
 3 - Fechar o arquivo.
 
+OBSERVAÇÃO:
+- Quando usamos o read(), podemos limitar o conteúdo definindo um parâmetro que determina quantos caracteres vamos ler,
+ou seja, a leitura começa da posição zero e lê até onde quisermos;
+- Quando usamos o readline(), o parâmetro determina o corte da linha, ou seja, se usarmos readline(22), na primeira
+linha teremos somente 22 caracteres, o restante do texto é jogado para a próxima linha;
+- Quando usamos o seek, o parâmetro determina a partir de onde iniciamos nossa leitura.
 """
 
 # Passo 1 - Abrir o arquivo:
 arquivo = open('texto.txt')
 
 # Passo 2 - Trabalhar o arquivo:
+
 """
 print(arquivo.read())
 
@@ -67,10 +74,12 @@ print(retorno.split(' '))
 
 # Exemplo de readlines():
 
+"""
 # Podemos por exemplo saber quantas linhas temos em um texto:
 linhas = arquivo.readlines()
 print(f'Este arquivo tem {len(linhas)} linhas')
 print(linhas)
+"""
 
 """
 OBS IMPORTANTE:
@@ -87,3 +96,5 @@ print(f'Status closed do arquivo: {arquivo.closed}')
 arquivo.close()
 
 print(f'Status closed do arquivo: {arquivo.closed}')
+
+# OBS: Se tentarmos manipular o arquivo após seu fechamento, teremos um ValueError.
