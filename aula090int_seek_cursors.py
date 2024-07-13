@@ -30,9 +30,16 @@ print(arquivo.read())
 """
 
 # Exemplo de readline():
+
+retorno = arquivo.readline()
+print(type(retorno))
+print(retorno)
+
+"""
 print(arquivo.readline())
 # Usando no formato acima nós imprimimos somente a 1ª linha, mas o cursor ficou esperando no início da 2ª linha
 print(arquivo.readline())
 # E assim imprimimos a segunda linha na sequência
 print(arquivo.readline())
 # E a terceira linha
+"""
