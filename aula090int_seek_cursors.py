@@ -10,10 +10,22 @@ linha a linha. Para isto usamos a função readline().
 readline() = É uma função que lê o arquivo linha a linha.
 
 readlines() = É uma função que coloca o texto em uma lista de strings sendo que cada linha é uma string na lista.
+
+close() = É uma função qu eencerra a conexão (streaming) entre o arquivo aberto e lido e o nosso programa.
+
+closed = É uma função que verifica se o arquivo está aberto ou fechado.
+
+Passos para se trabalhar com um arquivo:
+1 - Abrir o arquivo;
+2 - Trabalhar o arquivo;
+3 - Fechar o arquivo.
+
 """
 
+# Passo 1 - Abrir o arquivo:
 arquivo = open('texto.txt')
 
+# Passo 2 - Trabalhar o arquivo:
 """
 print(arquivo.read())
 
@@ -59,3 +71,19 @@ print(retorno.split(' '))
 linhas = arquivo.readlines()
 print(f'Este arquivo tem {len(linhas)} linhas')
 print(linhas)
+
+"""
+OBS IMPORTANTE:
+Quando abrimos um arquivo com a função open(), criamos uma conexão entre o arquivo no disco do computador e o  nosso
+programa. Essa conexão é chamada de streaming. Ao finalizar os trabalhos com o arquivo, devemos fechar essa conexão.
+Para isso utilizamos a função close().
+
+Fechar esse arquivo é muito importante, pois evita vários problemas e erros.
+"""
+
+print(f'Status closed do arquivo: {arquivo.closed}')
+
+# Passo 3 - Fechar o arquivo:
+arquivo.close()
+
+print(f'Status closed do arquivo: {arquivo.closed}')
