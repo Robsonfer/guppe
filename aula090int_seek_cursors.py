@@ -9,6 +9,7 @@ linha a linha. Para isto usamos a função readline().
 
 readline() = É uma função que lê o arquivo linha a linha.
 
+readlines() = É uma função que coloca o texto em uma lista de strings sendo que cada linha é uma string na lista.
 """
 
 arquivo = open('texto.txt')
@@ -31,10 +32,6 @@ print(arquivo.read())
 
 # Exemplo de readline():
 
-retorno = arquivo.readline()
-print(type(retorno))
-print(retorno)
-
 """
 print(arquivo.readline())
 # Usando no formato acima nós imprimimos somente a 1ª linha, mas o cursor ficou esperando no início da 2ª linha
@@ -43,3 +40,22 @@ print(arquivo.readline())
 print(arquivo.readline())
 # E a terceira linha
 """
+
+# Analisando o tipo do readline():
+
+"""
+retorno = arquivo.readline()
+print(type(retorno))
+print(retorno)
+# Sabendo que o tipo do retorno do readline() é string, podemos usar tudo aquilo que é funcional para strings.
+
+# Por exemplo, criar uma lista usando como separador o caracter espaço:
+print(retorno.split(' '))
+"""
+
+# Exemplo de readlines():
+
+# Podemos por exemplo saber quantas linhas temos em um texto:
+linhas = arquivo.readlines()
+print(f'Este arquivo tem {len(linhas)} linhas')
+print(linhas)
