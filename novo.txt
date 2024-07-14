@@ -1,0 +1,3 @@
+É muito fácil escrever dados em um arquivo.
+Pdemos colocar quantas linhas quisermos.
+Esta é a última linha.
