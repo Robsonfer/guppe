@@ -1,0 +1,5 @@
+﻿"""
+Escrevendo em arquvos
+
+
+"""
