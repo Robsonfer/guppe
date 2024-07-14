@@ -20,12 +20,15 @@ criado. Dessa forma, o conteúdo anterior é perdido.
 """
 
 # Exemplo de escrita - modo 'w' (write)
+"""
 with open('novo.txt', 'w') as arquivo:
     arquivo.write('É muito fácil escrever dados em um arquivo.\n')
     arquivo.write('Pdemos colocar quantas linhas quisermos.\n')
     arquivo.write('Esta é a última linha.\n')
+"""
 
 # Somente para provar que não há diferença, vamos criar um exemplo na forma tradicional, sem with:
+"""
 arquivo = open('mais.txt', 'w')
 arquivo.write('+--------------------------------------------------------------+\n')
 arquivo.write('|                  TABELA DE DADOS DA FAMÍLIA                  |\n')
@@ -39,6 +42,7 @@ arquivo.write('|--------------------------------------------------------------|\
 arquivo.write('|      Rosângela     |      Santini       |         42         |\n')
 arquivo.write('+--------------------+--------------------+--------------------+\n')
 arquivo.close()
+"""
 
 # Podemos fazer também o texto multiplicado. É uma propriedade do tipo string:
 """
@@ -47,3 +51,10 @@ with open('geek.txt', 'w') as arquivo:
 """
 
 # Podemos também fazer da seguinte forma:
+with open('frutas.txt', 'w') as arquivo:
+    while True:
+        fruta = input('Informe uma fruta ou digite sair: ').lower()
+        if fruta != 'sair':
+            arquivo.write(fruta + '\n')
+        else:
+            break
