@@ -1,3 +1,7 @@
-laranja
-uva
+banana
 maçã
+pêra
+abacaxi
+morango
+manga
+abacate

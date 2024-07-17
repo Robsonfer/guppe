@@ -33,8 +33,29 @@ with open('university.txt', 'x') as arquivo:
 # A partir de agora, ou seja, depois de gerado o arquivo, se tentar abrir o arquivo novamente, o Python nos retorna um FileExistsErro.
 
 # Suponha que queremos escrever um arquivo, mas não queremos subscrever se ele já exista, podemos fazer o seguinte:
+"""
 try:
     with open('university.txt', 'x') as arquivo:
         arquivo.write('Teste de conteúdo 2.\n')
 except FileExistsError:
     print('Este arquivo já existe, tente outro nome!')
+"""
+
+# Eemplo do modo 'a':
+"""
+with open('frutas.txt', 'a') as arquivo:
+    while True:
+        fruta = input('Informe uma fruta ou sair: ').lower()
+        if fruta != 'sair':
+            arquivo.write(fruta + '\n')
+        else:
+            break
+"""
+
+# Exemplo do modo '+':
+with open('outro.txt', 'a+') as arquivo:
+    arquivo.seek(0)
+    arquivo.write('No topo!\n')
+    arquivo.write('Nova linha.\n')
+    arquivo.write('Mais uma linha.\n')
+# O mais sempre vem com algum outro modo.
