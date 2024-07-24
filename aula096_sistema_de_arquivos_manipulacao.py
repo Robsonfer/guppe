@@ -1,6 +1,7 @@
 """
 Sistema de Arquivos - Manipulação
 
+import os
 
 # Descobrindo se um arquivo ou diretório existe:
 
@@ -119,7 +120,20 @@ OS ARQUIVOS DELETADOS VIA OS NÃO VÃO PARA A LIXEIRA, ELES SOMEM.
 
 
 
+# Deletando diretórios vazios:
+
+# os.rmdir('templates/geek/university') # remove o diretório university
+os.rmdir('templates/geek') # remove o diretório geek
+
+# Se o diretório tiver qualquer conteúdo, teremos um OSError.
+# Se o diretório não existir, teremos um FileNotFoundError
 """
 
 import os
 
+# Removendo uma árvore de diretórios:
+for arquivo in os.scandir('geek2'):
+    if arquivo.is_file():
+        os.remove(arquivo.path)
+    if not arquivo.is_file:
+        os.rmdir(arquivo.path)
