@@ -123,17 +123,45 @@ OS ARQUIVOS DELETADOS VIA OS NÃO VÃO PARA A LIXEIRA, ELES SOMEM.
 # Deletando diretórios vazios:
 
 # os.rmdir('templates/geek/university') # remove o diretório university
-os.rmdir('templates/geek') # remove o diretório geek
+# os.rmdir('templates/geek') # remove o diretório geek
+# os.rmdir('geek2/novo/outro2') # remove o diretório outro2
+# os.rmdir('geek2/novo') # remove o diretório novo
 
 # Se o diretório tiver qualquer conteúdo, teremos um OSError.
 # Se o diretório não existir, teremos um FileNotFoundError
-"""
 
-import os
 
-# Removendo uma árvore de diretórios:
+
+# Removendo uma árvore de diretórios vazios:
+# os.removedirs('geek2/outro/outro2')
+# os.removedirs('geek2/outro2/outro3')
+
+# Se algum dos diretórios contiver arquivos ou outros diretórios, o processo para.
+
+
+
+# Removendo uma árvore de arquivos:
 for arquivo in os.scandir('geek2'):
     if arquivo.is_file():
         os.remove(arquivo.path)
-    if not arquivo.is_file:
-        os.rmdir(arquivo.path)
+
+        
+
+# Podemos usar uma biblioteca de terceiros, desta forma os arquivos deletados podem ser enviados para a lixeira!
+
+# Deletando arquivos para a lixeira com send2trash
+
+from send2trash import send2trash
+
+send2trash('teste.txt') # Desta forma tudo o que for deletado vai direto para a lixeira.
+# OBS: Se o arquivo não existir, teremos OSError.
+
+
+
+"""
+
+import os
+from send2trash import send2trash
+
+# Deletando diretórios para a lixeira com send2trash
+send2trash('templates')
