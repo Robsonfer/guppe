@@ -1,7 +1,11 @@
 """
 Sistema de Arquivos - Manipulação
 
+Documentação: https://docs.python.org/3/libray/os.html?highlight=os#module-os
+
 import os
+
+
 
 # Descobrindo se um arquivo ou diretório existe:
 
@@ -17,11 +21,12 @@ print(os.path.exists('geek/university'))          # Retorno: True
 print(os.path.exists('outro'))                    # Retorno: True
 print(os.path.exists('geek/university/geek3.py')) # Retorno: True
 
-
 # Paths absolutos:
 print(os.path.exists('C:/Users/robsonfer/OneDrive - Armco do Brasil S.A/Perfil/Desktop/ROBSON/UDEMY/guppe/geek/university')) # Retorno: True
 print(os.path.exists('C:/Users/robsonfer/OneDrive - Armco do Brasil S.A/Perfil/Desktop/ROBSON/UDEMY/guppe/university'))      # Retorno: False
 print(os.path.exists('C:/Users/robsonfer/OneDrive - Armco do Brasil S.A/Perfil/Desktop/ROBSON/UDEMY/guppe/geek/university/geek4.py')) # Retorno: True
+
+
 
 
 # Criando arquivos:
@@ -40,6 +45,7 @@ Com o with o arquivo fecha ao final do bloco.
 
 
 
+
 # Melhor forma de criar arquivos, mas que não funciona no Windows:
 os.mknod('arquivo-teste4.txt')
 os.mknod('C:/Users/robsonfer/OneDrive - Armco do Brasil S.A/Perfil/Desktop/ROBSON/UDEMY/guppe/geek/university.txt')
@@ -49,6 +55,7 @@ Para Windows use sempre uma das formas entre 1 e 3 mencionados acima
 
 OBS: Criando um arquivo via mknod(), se o arquivo já existir, teremos o erro FileExistisError.
 Mas sabemos como tratar erros.
+
 
 
 
@@ -72,6 +79,7 @@ except FileExistsError:
 
 
 
+
 # Criando diretórios múltiplos (árvore de diretórios):
 os.makedirs('templates/geek/university')
 
@@ -80,10 +88,12 @@ os.makedirs('templates/geek/university')
 
 
 
+
 # Tratando erros na criação de diretórios de maneira direta:
 
 # Basta colocar um parâmetro a mais conforme abaixo e mesmo que já exista o diretório, não apresentará erro:
 os.makedirs('templates2/novo2/outro2', exist_ok=True)
+
 
 
 
@@ -104,6 +114,7 @@ os.rename('geek2/novo/outro2/arquivo_teste2.txt', 'geek2/novo/outro2/arquivo_tes
 
 
 
+
 # Deletando arquivos:
 
 os.remove('geek2/novo/outro2/arquivo_teste4.txt')
@@ -120,6 +131,7 @@ OS ARQUIVOS DELETADOS VIA OS NÃO VÃO PARA A LIXEIRA, ELES SOMEM.
 
 
 
+
 # Deletando diretórios vazios:
 
 # os.rmdir('templates/geek/university') # remove o diretório university
@@ -132,6 +144,7 @@ OS ARQUIVOS DELETADOS VIA OS NÃO VÃO PARA A LIXEIRA, ELES SOMEM.
 
 
 
+
 # Removendo uma árvore de diretórios vazios:
 # os.removedirs('geek2/outro/outro2')
 # os.removedirs('geek2/outro2/outro3')
@@ -140,28 +153,81 @@ OS ARQUIVOS DELETADOS VIA OS NÃO VÃO PARA A LIXEIRA, ELES SOMEM.
 
 
 
+
 # Removendo uma árvore de arquivos:
 for arquivo in os.scandir('geek2'):
     if arquivo.is_file():
         os.remove(arquivo.path)
 
+
         
 
 # Podemos usar uma biblioteca de terceiros, desta forma os arquivos deletados podem ser enviados para a lixeira!
 
-# Deletando arquivos para a lixeira com send2trash
-
 from send2trash import send2trash
+
+# Deletando arquivos para a lixeira com send2trash
 
 send2trash('teste.txt') # Desta forma tudo o que for deletado vai direto para a lixeira.
 # OBS: Se o arquivo não existir, teremos OSError.
 
-
-
-"""
-
-import os
-from send2trash import send2trash
-
 # Deletando diretórios para a lixeira com send2trash
 send2trash('templates')
+
+
+
+
+# Trabalhando com arquivos e diretórios temporários (tempfile):
+
+# Criando um dirertório temporário:
+import tempfile
+
+with tempfile.TemporaryDirectory() as tmp:
+    print(f'Criei o diretório temporário em {tmp}')
+    with open(os.path.join(tmp, 'arquivo_temporario.txt'), 'w') as arquivo:
+        arquivo.write('Geek University\n')
+    input()
+
+Traduzindo:
+    1 - Com o with tempfile.TerporaryDirectory() as tmp nós criamos um diretório para arquivoso temporários que só vai existir
+        enquanto o bloco do with existir.
+    2 - Com o with open(os.path.join(tmp, 'arquivo_temporario.txt'), 'w') as arquivo, criamos um arquivo dentro deste diretório
+        temporário e logo em seguida escrevemos uma frase dentro dele.
+    3 - O input() foi criado somente para que possamos enxergar o arquivo temporário antes que ele desapareça, pois assim que
+        sairmos do bloco do with o diretório temporário é excluído.
+
+
+
+# Criando um arquivo temporário:
+with tempfile.TemporaryFile() as tmp:
+   tmp.write(b'Geek University\n')
+   tmp.seek(0)
+   print(tmp.read())
+
+Traduzindo:
+    1 - Com o with tempfile.TeporaryFile() as tmp nós criamos um arquivo temporário. Funciona igual ao exemplo acima;
+    2 - Em tmp.write(b'Geek University\n'), repare que usamos um b antes da string. Isto acontece porque para arquivos, o Python
+        não aceita escrever em string, somente em binário (b de bites);
+    3 - Em tmp.seek(0) nós posicionamos o cursor no início do arquivo para viabilizar a leitura;
+    4 - Por fim, imprimimos o arquivo temporário.
+
+
+
+    
+# Não somos obrigados a usar with:
+arquivo = tempfile.TemporaryFile()
+arquivo.write(b'Geek University\n')
+arquivo.seek(0)
+print(arquivo.read())
+arquivo.close()
+
+# Podemos fazer de outra forma também:
+arquivo = tempfile.NamedTemporaryFile()
+arquivo.write(b'Geek University\n')
+
+print(arquivo.name)
+print(arquivo.read())
+input()
+
+arquivo.close()
+"""
