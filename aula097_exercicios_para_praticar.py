@@ -25,8 +25,21 @@ with open('arq.txt') as arquivo:
 """
 
 # Solução do professor:
+"""
+with open('arq.txt', 'a') as arquivo:
+    while True:
+        caractere: str = input('Informe um caractere ou 0 para sair: ')
+        if caractere != '0':
+            arquivo.write(f'{caractere}\n')
+        else:
+            break
 
+with open('arq.txt', 'r') as arquivo:
+    linhas = arquivo.readlines()
 
+for linha in linhas:
+    print(linha)
+"""
 
 ####################################################### EXERCÍCIO 2 #######################################################
 """
@@ -51,7 +64,30 @@ with open(input('Digite o nome de um arquivo de texto: ').lower() + '.txt') as a
 """
 
 #Solução do professor:
+"""
+vogais = 0
+consoantes = 0
+arquivo: str = input('Informe o nome do arquivo para abrir: ')
 
+with open(arquivo, 'r') as arq:
+    linhas = arq.readlines()
+
+for linha in linhas:
+    if linha.replace('\n', '').lower() in ['a', 'e', 'i', 'o', 'u']:
+        vogais = vogais + 1
+    else:
+        consoantes = consoantes + 1
+
+if vogais > 0:
+    print(f'Existe(m) {vogais} no arquivo.')
+else:
+    print(f'Não existe(m) vogais no arquivo!')
+
+if consoantes > 0:
+    print(f'Existe(m) {consoantes} no arquivo.')
+else:
+    print(f'Não existe(m) consoantes no arquivo!')
+"""
 
 ####################################################### EXERCÍCIO 3 #######################################################
 """
@@ -66,3 +102,11 @@ with open(input('Digite o nome de um arquivo de texto: ').lower() + '.txt') as a
 """
 
 # Solução do professor:
+"""
+arquivo: str = input('Informe o nome do arquivo para abrir: ')
+
+with open(arquivo, 'r') as arq:
+    linhas = arq.readlines()
+
+print(f'Existe(m) {len(linhas)} linha(s) no arquivo.')
+"""
