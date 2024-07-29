@@ -1,0 +1,5 @@
+"""
+Escrevendo um iterador customizado
+
+
+"""
