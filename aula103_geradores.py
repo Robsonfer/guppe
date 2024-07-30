@@ -52,3 +52,21 @@ gen10 = conta_ate(10)
 
 for num in gen10:
     print(num)
+
+
+# Se a gente trabalhar mesclando:
+gen_mesc = conta_ate(10)
+
+print(next(gen_mesc)) # 1
+print(next(gen_mesc)) # 2
+
+print('Até aqui foi com next!')
+
+for num in gen_mesc: # de 3 a 10!
+    print(num)
+
+
+# E pode acontecer de eu precisar gerar tudo de uma vez. Uma fora é:
+gen_all = list(conta_ate(10))
+
+print(gen_all)
