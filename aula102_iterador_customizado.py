@@ -3,7 +3,6 @@ Escrevendo um iterador customizado
 """
 
 # Escrevendo um contador igual ao range:
-
 class Contador:
     def __init__(self, menor, maior):
         self.menor = menor
@@ -20,4 +19,9 @@ class Contador:
         raise StopIteration
 
 for n in Contador(1, 61):
+    print(n)
+
+
+# O que foi feito acima é basicamente o mesmo que:
+for n in range(1, 61):
     print(n)
