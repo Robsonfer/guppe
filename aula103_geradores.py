@@ -47,7 +47,7 @@ print(next(gen))
 print(next(gen))
 
 
-# Conando até 10 e usando um loop for:
+# Contando até 10 e usando um loop for:
 gen10 = conta_ate(10)
 
 for num in gen10:
