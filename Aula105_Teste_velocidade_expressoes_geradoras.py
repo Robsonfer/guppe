@@ -3,8 +3,6 @@
 
 """
 Teste de velocidade com Expressões Geradoras
-"""
-
 
 # REVISANDO:
 
@@ -31,8 +29,10 @@ print(next(ge2))
 print(next(ge2))
 print(next(ge2))
 
+# Ambos são generators, mas o primeiro foi feito através da função nums().
+# O segundo não tem função por isso é uma expression
+# Os dois são executados de formas diferentes.
 """
-Ambos são generators, mas o primeiro foi feito através da função nums().
-O segundo não tem função por isso é uma expression
-Os dois são executados de formas diferentes.
-"""
+
+# Podemos usar funções integradas do Python, por exemplo:
+print(sum(num for num in range(1, 10)))
