@@ -6,8 +6,12 @@ Teste de memória com Generators
 
 """
 
-# FUNÇÃO USANDO LISTAS 43MB:
+import sys
+sys.set_int_max_str_digits(0)
+
 """
+# FUNÇÃO USANDO LISTAS 43MB:
+
 def fib_lista(max):
     nums = []
     a, b = 0, 1
@@ -17,7 +21,7 @@ def fib_lista(max):
     return nums
 
 # Teste 1:
-for n in fib_lista(10000):
+for n in fib_lista(100000):
     print(n)
 """
 
@@ -31,5 +35,5 @@ def fib_gen(max):
         contador += 1
 
 # Teste 2:
-for n in fib_gen(10000):
+for n in fib_gen(100000):
     print(n)
