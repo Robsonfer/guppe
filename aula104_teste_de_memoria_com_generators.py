@@ -20,7 +20,8 @@ def fib_lista(max):
 for n in fib_lista(10000):
     print(n)
 """
- 
+
+
 # FUNCÃO USANDO GERADORES:
 def fib_gen(max):
     a, b, contador = 0, 1, 0
