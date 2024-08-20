@@ -44,3 +44,6 @@ print(f'Esse é o resultado da multiplicação: {calcular(10, 10, multiplicar)}'
 
 # Dividir:
 print(f'Esse é o resultado da divisão: {calcular(10, 10, dividir)}')
+
+
+# Nested Functions - Funções Aninhadas:
