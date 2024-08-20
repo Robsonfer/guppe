@@ -47,3 +47,22 @@ print(f'Esse é o resultado da divisão: {calcular(10, 10, dividir)}')
 
 
 # Nested Functions - Funções Aninhadas:
+
+"""
+Em Python podemos também ter funções dentro de funções, que são conhecidas como Nested Functions
+ou também como Inner Functions (Funções Internas)
+"""
+
+# Exemplo
+from random import choice
+
+def cumprimento(pessoa):
+    def humor():
+        return choice(('E aí ', 'Suma daqui ', 'Gosto muito de você '))
+    return humor() + pessoa
+
+print(cumprimento('Robson'))
+
+print(cumprimento('Robson'))
+
+print(cumprimento('Robson'))
