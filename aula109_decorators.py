@@ -138,3 +138,5 @@ def admin(request):
     return 'Pode acessar admin'
 
 """
+
+# OBS: Não confunda Decorator com Decorator Function!
