@@ -57,3 +57,5 @@ def ordenar(principal, acompanhamento):
 print(saudacao('Angelina'))
 
 print(ordenar('Hot Roll', 'Molho Tarê'))
+
+print(ordenar('picanha', 'molho de pimenta'))
