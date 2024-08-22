@@ -94,3 +94,47 @@ def dormir():
 
 
 dormir()
+
+print('\n----- separando -----\n')
+
+
+# Um exemplo para ser usado na Programação Web
+
+"""
+Imagine um site como o seguinte menu de cabeçalho:
+
++----------------+----------------+----------------+-------------------+
+|      Home      |    Serviços    |    Produtos    |   Adminstrativo   |
++----------------+----------------+----------------+-------------------+
+
+Você quer que o acesso do site se dê da seguinte forma:
+
+https://www.suaempresa.com.br/home -> Acesso livre para qualquer usuário à pagina home
+https://www.suaempresa.com.br/servicos -> Acesso livre para qualquer usuário à página serviços
+https://www.suaempresa.com.br/produtos -> Acesso livre para qualquer usuário à página produtos
+https://www.suaempresa.com.br/admin -> Acesso restrito somente para usuários logados
+
+OBS: O exemplo abaixo não é um código funcional. É apenas um exemplo para elucidar como funcionaria:
+
+def checa_login():
+    if not request.usuario:
+        redirect('https://www.suaempresa.com.br/login')
+
+
+def checa_home(request):
+    return 'Pode acessar home'
+
+
+def servicos(request):
+    return 'Pode acessar servicos'
+
+
+def produtos(request):
+    return 'Pode acessar produtos'
+
+
+@checa_login
+def admin(request):
+    return 'Pode acessar admin'
+
+"""
