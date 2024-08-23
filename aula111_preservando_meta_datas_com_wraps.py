@@ -59,7 +59,7 @@ from functools import wraps
 
 
 def ver_log(funcao):
-    @wraps(funcao)
+    @wraps(funcao) # Essa é a solução do problema!
     def logar(*args, **kwargs):
         """
         Função de Login dentro de outra
@@ -90,3 +90,4 @@ print('----------- dividindo -----------')
 
 print(soma.__name__) # soma
 print(soma.__doc__) # Soma dois númeos :return: a + b
+print(help(soma))
