@@ -7,7 +7,7 @@ Funções de Maior Grandeza - Higher Order Functions (HOF)
 O que isso significa?
     - Quando uma linguagem de programação suporta HOF, indica que podemos ter funções que retornam outras funções
     como resultado, ou mesmo que podemos passar funções como argumentos para outras funções e até mesmo criar variáveis
-    do tipo de funções em nossos programas.
+    do tipo de funções nos nossos programas.
 
 OBS: Na seção de funções, nós utilizamos isso.
 
@@ -57,7 +57,7 @@ print('-------------------')
 # Nested Functions - Funções Aninhadas:
 
 """
-Em Python podemos também ter funções dentro de funções, que são conhecidas como Nested Functions
+Em Python podemos também ter funções dentro de funções, que são conhecidas como Nested Functions (Funções aninhadas) 
 ou também como Inner Functions (Funções Internas)
 """
 
