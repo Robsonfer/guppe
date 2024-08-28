@@ -7,8 +7,6 @@ Preservando Metadatas com Wraps
 Metadatas (Metadados) -> São dados intrínsecos em arquivos.
 
 Wraps -> São funções que envolvem elementos com diversas finalidades.
-
-
 """
 
 print('----------- PROBLEMA -----------')
