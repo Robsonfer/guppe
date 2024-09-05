@@ -223,5 +223,52 @@ print(f'Acesso direto sem instanciar o atributo de classe: {Product.tax}')
 print(product1.id)
 print(product2.id)
 
-# OBS: Em linguagens como Java, os atributos de classe são chamados de atributos estáticos!
+# OBS: Em linguagens como o Java, os atributos de classe são chamados de atributos estáticos!
 
+
+print('-------------- ATRIBUTOS DE DINÂMICOS --------------')
+
+"""
+Um atributo dinâmico nada mais é que um atributo de instância que pode ser criado em tempo de execução.
+
+OBS: O atributo dinâmico será exclusivo da instância que o criou.
+
+Importante: Existe essa possibilidade de criar atributos dinâmicos, mas não é comum ser feito.
+"""
+
+# Exemplo usando a classe Product já criada anteriormente
+
+# Criando um atributo dinâmico em tempo de execução:
+
+product2.weight = '5kg' # Note que na classe Produto não existe o atributo peso
+
+print(f'Product2 name: {product2.name}')
+print(f'Product2 description: {product2.description}')
+print(f'Product2 value: {product2.value}')
+print(f'Product2 weight: {product2.weight}')
+
+# Deletando atributos:
+
+# Para deletar, vamos instanciar um novo objeto na classe produto:
+
+product3 = Product('Super Nintendo', 'Nintendo 16 bits Video Game Console', 700)
+
+# Vamos verificar o dict dos nossos produtos:
+print(product1.__dict__)
+print(product2.__dict__)
+print(product3.__dict__)
+
+# Vamos tentar fazer o mesmo com a nossa classe Product:
+print(Product.__dict__)
+
+# Deletando na instância product2 o atributo weight:
+del product2.weight
+
+# Verificando se o atributo peso foi deletado:
+print(product2.__dict__)
+
+# Deletando na instância product3 o atributo value:
+del product3.value
+
+# conferindo  se o atributo value foi deletado:
+print(product3.__dict__)
