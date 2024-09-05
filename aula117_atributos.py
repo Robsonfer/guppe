@@ -94,7 +94,7 @@ Em Python, por convenção, ficou estabelecido que todo atributo de uma classe �
     acessado em todo o projeto.
 
 Caso queiramos demonstrar que determinado atributo deve ser tratado como privado, ou seja, que deve ser  
-    acessado/utilizado somente dentro da própria classe onde está declarado, utiliza-se __ (duplo underscore) no 
+    acessado/utilizado somente dentro da própria classe onde está declarado, utiliza-se __ (duplo underline) no 
     início de seu nome.
 
 Isso é conhecido também como Name Mangling.
