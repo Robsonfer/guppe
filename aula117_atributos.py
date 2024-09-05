@@ -1,6 +1,3 @@
-#!/usr/bin/python
-# -*- coding: UTF-8 -*-
-
 """
 POO - ATRIBUTOS
 
@@ -19,8 +16,10 @@ OBS: O Método Construtor é um método especial utilizado para a construção d
 
 """
 
-# Exemplos de Atributos de instância:
+print('-------------- ATRIBUTOS DE INSTÂNCIA --------------')
 
+
+# Exemplo de Atributos de instância:
 
 class Lampada:
     def __init__(self, voltagem, cor):
@@ -30,7 +29,7 @@ class Lampada:
 
 
 # Seguem as demais classes conforme aula anterior:
-
+# As classes abaixo são Classes com Atributos de Instância Públicos
 
 class ContaCorrente:
     def __init__(self, numero, limite, saldo):
@@ -92,12 +91,137 @@ class Teste:
 ATRIBUTOS PÚBLICOS E ATRIBUTOS PRIVADOS:
 
 Em Python, por convenção, ficou estabelecido que todo atributo de uma classe é público. Ou seja, pode ser 
-acessado em todo o projeto.
+    acessado em todo o projeto.
 
-Caso queiramos demonstrar que determinado atributo deve ser tratado como privado, ou seja, que deve ser 
-acessado/utilizado somente dentro da própria classe onde está declarado, utiliza-se __ (duplo underscore) no
-início de seu nome.
+Caso queiramos demonstrar que determinado atributo deve ser tratado como privado, ou seja, que deve ser  
+    acessado/utilizado somente dentro da própria classe onde está declarado, utiliza-se __ (duplo underscore) no 
+    início de seu nome.
 
 Isso é conhecido também como Name Mangling.
 """
+
+
+# Classes com Atributos de Instância Privados:
+
+class Acesso:
+    def __init__(self, email, senha):
+        self.email = email
+        self.__senha = senha
+
+    def mostra_senha(self):
+        print(self.__senha)
+
+    def mostra_email(self):
+        print(self.email)
+
+
+"""
+OBS: Lembre-se que isso é apenas uma convenção, ou seja, a linguagem Python não vai impedir que façamos 
+    acesso aos atributos sinalizados fora da classe.
+"""
+
+# Exemplo:
+
+user = Acesso('user@gmail.com', '123456')
+
+print(user.email)
+# Como mudamos o atributo email da classe Acesso para público, conseguimos imprimir este atributo fora da classe
+
+# print(user.__senha)
+
+"""
+Neste caso recebemos um AttributeError, mas é só uma etapa de aviso. Desta forma não conseguimos acessar.
+E se usaros o dir()? Veja a primeira informação que aparece. Basta imprimir user._Acesso__senha que teremos acesso.
+Mas não deveríamos fazer este acesso! Utilizar somente em casos de testes ou em último caso.
+
+O que podemos fazer é criar um outro método dentro da classe que imprime a senha, e depois chamar com 
+    user.mostra_senha()
+"""
+print(dir(user))
+
+print(user._Acesso__senha)  # Este é o Name Mangling (Confusão de Nomes)
+
+# Imprimindo a senha (atributo privado) depois de criar um método dentro da classe:
+user.mostra_senha()
+
+# Imprimindo o email da mesma forma, mesmo sendo um atributo público:
+user.mostra_email()
+
+"""
+Para fechar este tópico, o que significa Atributos de Instância?
+    Significa que ao criarmos instâncias/objetos de uma classe, todas as instâncias terão estes atributos.
+"""
+
+# Exemplo
+
+# Aqui temos duas instâncias/objetos da classe Acesso:
+user1 = Acesso('user1@gmail.com', '123456')
+user2 = Acesso('user2@gmail.com', '654321')
+
+print('Chamando o atributo email do objeto user1:')
+user1.mostra_email()
+
+print('Chamando o atributo email do objeto user2:')
+user2.mostra_email()
+
+print('-------------- ATRIBUTOS DE CLASSE --------------')
+
+# Para explicar sobre atributos de classe usaremos a classe já construída Produto
+
+# Nos atributos de instância cada objeto instanciado tem os seus próprios atributos:
+p1 = Produto('Playtation 4', 'Vídeo Game', 2300)
+p2 = Produto('Xbox S', 'Video Game', 4500)
+
+"""
+Os atributos de classe são aqueles declarados diretamente na classe, ou seja, fora do construtor. Geralmente já
+    inicializamos um valor e este valor é compartilhado entre todas as instâncias da classe.
+Ao invés de cada instância da classe ter seus próprios valores como é o caso dos atributos de instância, com os
+    atributos de classe, todas as instâncias terão o mesmo valor para este atributo.
+"""
+
+
+# Exemplo:
+
+class Product:
+
+    # Atributo de classe
+    tax = 1.05  # 5% de imposto
+    counter = 0
+
+    def __init__(self, name, description, value):
+        self.id = Product.counter + 1
+        self.name = name
+        self.description = description
+        self.value = (value * Product.tax)
+        Product.counter = self.id
+
+
+product1 = Product('Playstation 4', 'Sony Video Game Console', 2300)
+product2 = Product('Xbox S', 'Microsoft Video Game Console', 4500)
+
+
+print('---- Name ----')
+print(f'Product1 name: {product1.name}')
+print(f'Product2 name: {product2.name}')
+print('---- Description ----')
+print(f'Product1 description: {product1.description}')
+print(f'Product2 description: {product2.description}')
+print('---- Tax ----')
+print(f'Product1 Tax value: {product1.tax}') # Acesso possível, mas incorreto. Abaixo acesso direto (correto)
+print(f'Product2 Tax value: {product2.tax}') # Acesso possível, mas incorreto. Abaixo acesso direto (correto)
+print('---- Final Value ----')
+print(f'Product1 final value: {product1.value}')
+print(f'Product2 final value: {product2.value}')
+
+# OBS: Não precisamos criar uma instância de uma classe para fazer acesso a um atributo de classe!
+
+# Exemplo:
+
+print(f'Acesso direto sem instanciar o atributo de classe: {Product.tax}')
+
+# Implementando o atributo de classe id que atribui um nº de identificação automaticamente a cada objeto instanciado:
+print(product1.id)
+print(product2.id)
+
+# OBS: Em linguagens como Java, os atributos de classe são chamados de atributos estáticos!
 
