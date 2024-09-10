@@ -46,19 +46,12 @@ class Produto:
         Produto.contador = self.__id
 
     def desconto(self, porcentagem):
-<<<<<<< HEAD
-       """
-       Retorna o valor do produto com o desconto.
-       """
-       return(self.__valor * (100 - porcentagem)) / 100
-=======
         """
         Retorna o valor do produto com desconto
         :param porcentagem:
         :return:
         """
         return (self.__valor * (100 - porcentagem)) / 100
->>>>>>> a5ff60a67fb949fc1ac731c4da1d2818416a55d3
 
 
 class Usuario:
@@ -68,11 +61,6 @@ class Usuario:
         self.__senha = senha
 
 
-<<<<<<< HEAD
-p1 = Produto('Playstation 5', 'Video Game', 2300)
-
-print(p1.desconto(50))
-=======
 # Testando o método desconto:
 
 produto1 = Produto('Playstation 5', 'Vídeo Game', 2300)
@@ -81,4 +69,5 @@ print(f'O valor do Pruduto com desconto é de R$ {produto1.desconto(20)}')
 
 # Ou também podemos fazer assim, passando o self = produto1 e a porcentagem de desconto:
 print(f'O valor do Pruduto com desconto é de R$ {Produto.desconto(produto1, 50)}')
->>>>>>> a5ff60a67fb949fc1ac731c4da1d2818416a55d3
+
+# Ajustando mudanças!
