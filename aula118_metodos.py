@@ -70,4 +70,3 @@ print(f'O valor do Pruduto com desconto é de R$ {produto1.desconto(20)}')
 # Ou também podemos fazer assim, passando o self = produto1 e a porcentagem de desconto:
 print(f'O valor do Pruduto com desconto é de R$ {Produto.desconto(produto1, 50)}')
 
-# Ajustando mudanças!
