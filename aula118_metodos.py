@@ -26,7 +26,6 @@ class Lampada:
 
 
 class ContaCorrente:
-
     contador = 4999
 
     def __init__(self, limite, saldo):
@@ -37,7 +36,6 @@ class ContaCorrente:
 
 
 class Produto:
-
     contador = 0
 
     def __init__(self, nome, descricao, valor):
@@ -46,9 +44,14 @@ class Produto:
         self.__descricao = descricao
         self.__valor = valor
         Produto.contador = self.__id
-    
+
     def desconto(self, porcentagem):
-        
+        """
+        Retorna o valor do produto com desconto
+        :param porcentagem:
+        :return:
+        """
+        return (self.__valor * (100 - porcentagem)) / 100
 
 
 class Usuario:
@@ -57,3 +60,12 @@ class Usuario:
         self.__email = email
         self.__senha = senha
 
+
+# Testando o método desconto:
+
+produto1 = Produto('Playstation 5', 'Vídeo Game', 2300)
+
+print(f'O valor do Pruduto com desconto é de R$ {produto1.desconto(20)}')
+
+# Ou também podemos fazer assim, passando o self = produto1 e a porcentagem de desconto:
+print(f'O valor do Pruduto com desconto é de R$ {Produto.desconto(produto1, 50)}')
