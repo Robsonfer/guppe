@@ -11,9 +11,9 @@ O método __init__ é um método especial chamado de construtor e sua função �
 Todo elemento em Python que inicia e finaliza com duplo underline é chamado de dunder (Double Underline).
 Os Métodos/Funções Dunder em Python são chamados de Métodos Mágicos.
 
-ATENÇÃO: Por mais que possamos criar nossas próprias funções utilizando dunder, não é aconselhado. O Python possui vários métodos
-    com esta forma de nomenclatura e pode ser que mudemos o comportamento dessas funções mágicas internas da linguagem. Portanto
-    nunca faça isso!
+ATENÇÃO: Por mais que possamos criar nossas próprias funções utilizando dunder, não é aconselhado.
+    O Python possui vários métodos com esta forma de nomenclatura e pode ser que mudemos o comportamento
+    dessas funções mágicas internas da linguagem. Portanto nunca faça isso!
 """
 
 
