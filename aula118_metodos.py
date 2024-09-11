@@ -14,6 +14,8 @@ Os Métodos/Funções Dunder em Python são chamados de Métodos Mágicos.
 ATENÇÃO: Por mais que possamos criar nossas próprias funções utilizando dunder, não é aconselhado.
     O Python possui vários métodos com esta forma de nomenclatura e pode ser que mudemos o comportamento
     dessas funções mágicas internas da linguagem. Portanto nunca faça isso!
+
+Métodos são escritos em letras minúsculas. Se o nome for composto, o nome terá as palavras separadas por underline.
 """
 
 
@@ -55,10 +57,14 @@ class Produto:
 
 
 class Usuario:
-    def __init__(self, nome, email, senha):
+    def __init__(self, nome, sobrenome, email, senha):
         self.__nome = nome
+        self.__sobrenome = sobrenome
         self.__email = email
         self.__senha = senha
+    
+    def nome_completo(self):
+        return f'{self.__nome} {self.__sobrenome}'
 
 
 # Testando o método desconto:
@@ -70,3 +76,18 @@ print(f'O valor do Pruduto com desconto é de R$ {produto1.desconto(20)}')
 # Ou também podemos fazer assim, passando o self = produto1 e a porcentagem de desconto:
 print(f'O valor do Pruduto com desconto é de R$ {Produto.desconto(produto1, 50)}')
 
+
+# Testando o método nome_completo:
+
+user1 = Usuario('Angelina', 'Jolie', 'angelina@gmail.com', '123456')
+user2 = Usuario('Felicity', 'Jones', 'felicity@gmail.com', '654321')
+
+print(user1.nome_completo())
+print(user2.nome_completo())
+
+
+# Testando o acesso à senha:
+
+print(f'Senha user1: {user1._Usuario__senha}') # Acesso de forma errada a um atributo de classe
+print(f'Senha user2: {user2._Usuario__senha}') # Acesso de forma errada a um atributo de classe
+# Note que mesmo fazendo acesso de forma errada, nós conseguimos obter a senha dos usuários
