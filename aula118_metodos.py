@@ -56,15 +56,25 @@ class Produto:
         return (self.__valor * (100 - porcentagem)) / 100
 
 
+# Importando biblioteca para criptografar as senhas da classe Usuario:
+
+from passlib.hash import pbkdf2_sha256 as cryp
+
+
 class Usuario:
     def __init__(self, nome, sobrenome, email, senha):
         self.__nome = nome
         self.__sobrenome = sobrenome
         self.__email = email
-        self.__senha = senha
+        self.__senha = cryp.encrypt(senha, rounds=200000, salt_size=16)
     
     def nome_completo(self):
         return f'{self.__nome} {self.__sobrenome}'
+    
+    def checa_senha(self, senha):
+        if cryp.verify(senha, self.__senha):
+            return True
+        return False
 
 
 # Testando o método desconto:
@@ -86,8 +96,34 @@ print(user1.nome_completo())
 print(user2.nome_completo())
 
 
-# Testando o acesso à senha:
+"""
+Testando o acesso à senha:
 
-print(f'Senha user1: {user1._Usuario__senha}') # Acesso de forma errada a um atributo de classe
-print(f'Senha user2: {user2._Usuario__senha}') # Acesso de forma errada a um atributo de classe
+print(f'Senha user1: {user1._Usuario__senha}') # Acesso de forma errada a um atributo de classe para mostrar uma insegurança
+print(f'Senha user2: {user2._Usuario__senha}') # Acesso de forma errada a um atributo de classe para mostrar uma insegurança
 # Note que mesmo fazendo acesso de forma errada, nós conseguimos obter a senha dos usuários
+
+"""
+
+nome = input('Informe o nome: ')
+sobrenome = input('Informe o sobrenome: ')
+email = input('Informe o e-mail: ')
+senha = input('Informe a senha: ')
+confirma_senha = input('Confirme a senha: ')
+
+if senha == confirma_senha:
+    user = Usuario(nome, sobrenome, email, senha)
+else:
+    print('Senha não confere!')
+    exit(1)
+
+print('Usuário criado com sucesso!')
+
+senha = input('Informe a senha para acesso: ')
+
+if user.checa_senha(senha):
+    print('Acesso Permitido')
+else:
+    print('Acesso Negado')
+
+print(f'Senha User Criptografada: {user._Usuario__senha}') # OBS: Acesso errado!
