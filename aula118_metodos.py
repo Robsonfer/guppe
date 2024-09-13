@@ -61,12 +61,18 @@ class Produto:
 from passlib.hash import pbkdf2_sha256 as cryp
 
 
+"""
+
+# TIRE OS COMENTÁRIOS PARA FAZER A PARTE DE MÉTODOS DE INSTÂNCIA
+
+# HAVERÁ A MESMA CLASSE REFATORADA PARA A PARTE DE MÉTODOS DE CLASSE!
+
 class Usuario:
     def __init__(self, nome, sobrenome, email, senha):
         self.__nome = nome
         self.__sobrenome = sobrenome
         self.__email = email
-        self.__senha = cryp.encrypt(senha, rounds=200000, salt_size=16)
+        self.__senha = cryp.hash(senha, rounds=200000, salt_size=16)
     
     def nome_completo(self):
         return f'{self.__nome} {self.__sobrenome}'
@@ -76,7 +82,11 @@ class Usuario:
             return True
         return False
 
+"""
 
+######################### TRECHO DE CÓDIGOS USANDO MÉTODOS DE INSTÂNCIA #########################
+
+"""
 # Testando o método desconto:
 
 produto1 = Produto('Playstation 5', 'Vídeo Game', 2300)
@@ -95,6 +105,8 @@ user2 = Usuario('Felicity', 'Jones', 'felicity@gmail.com', '654321')
 print(user1.nome_completo())
 print(user2.nome_completo())
 
+"""
+
 
 """
 Testando o acesso à senha:
@@ -104,6 +116,11 @@ print(f'Senha user2: {user2._Usuario__senha}') # Acesso de forma errada a um atr
 # Note que mesmo fazendo acesso de forma errada, nós conseguimos obter a senha dos usuários
 
 """
+
+
+"""
+
+# Cadastro e verificação de usuário e senha usando Métodos de Instância
 
 nome = input('Informe o nome: ')
 sobrenome = input('Informe o sobrenome: ')
@@ -127,3 +144,173 @@ else:
     print('Acesso Negado')
 
 print(f'Senha User Criptografada: {user._Usuario__senha}') # OBS: Acesso errado!
+
+"""
+
+
+######################### TRECHO DE CÓDIGOS USANDO MÉTODOS DE CLASSE #########################
+
+# Refatorando a Classe Usuario:
+
+
+"""
+class Usuario:
+
+    contador = 0
+
+    @classmethod # para uar métodos de classe deve-se usar antes este decorator
+    def conta_usuarios(cls): # a partir do decorator, não usamos mais self, mas cls
+        print(f'Classe: {cls}')
+        print(f'Temos {cls.contador} usuário(s) no sistema.')
+    
+    @classmethod
+    def ver(cls):
+        print('Teste')
+
+    def __init__(self, nome, sobrenome, email, senha):
+        self.__id = Usuario.contador + 1
+        self.__nome = nome
+        self.__sobrenome = sobrenome
+        self.__email = email
+        self.__senha = cryp.hash(senha, rounds=200000, salt_size=16)
+        Usuario.contador = self.__id
+    
+    def nome_completo(self):
+        return f'{self.__nome} {self.__sobrenome}'
+    
+    def checa_senha(self, senha):
+        if cryp.verify(senha, self.__senha):
+            return True
+        return False
+
+
+# Testando a Classe Usuario:
+
+user1 = Usuario('Robson', 'Ferreira', 'robsonnfer@gmail.com', '123456789')
+
+Usuario.conta_usuarios() # forma correta
+
+user1.conta_usuarios() # possível, mas incorreta
+
+"""
+
+
+"""
+IMPORTANTE: Os Métodos de Classe são conhecidos como Métodos estáticos me outras linguagens.
+
+Os métodos de instância são métodos que acessam atributos de instância.
+Os métodos de classe são métodos que não acessam os atributos de instância, mas pode acessar atributos de classe.
+"""
+
+
+######################### TRECHO DE CÓDIGOS USANDO MÉTODOS PRIVADOS #########################
+
+
+# Refatorando a Classe Usuario para mostrar o uso de Métodos Privados:
+
+"""
+class Usuario:
+
+    contador = 0
+
+    @classmethod # para uar métodos de classe deve-se usar antes este decorator
+    def conta_usuarios(cls): # a partir do decorator, não usamos mais self, mas cls
+        print(f'Classe: {cls}')
+        print(f'Temos {cls.contador} usuário(s) no sistema.')
+    
+    @classmethod
+    def ver(cls):
+        print('Teste')
+
+    def __init__(self, nome, sobrenome, email, senha):
+        self.__id = Usuario.contador + 1
+        self.__nome = nome
+        self.__sobrenome = sobrenome
+        self.__email = email
+        self.__senha = cryp.hash(senha, rounds=200000, salt_size=16)
+        Usuario.contador = self.__id
+        print(f'Usuário criado: {self.__gera_usuario()}')
+    
+    def nome_completo(self):
+        return f'{self.__nome} {self.__sobrenome}'
+    
+    def checa_senha(self, senha):
+        if cryp.verify(senha, self.__senha):
+            return True
+        return False
+    
+    def __gera_usuario(self):
+        return self.__email.split('@')[0]
+
+user = Usuario('Robson', 'Ferreira', 'robsonnfer@gmail.com', '123456789')
+
+# Ao tentar acessar o método privado desta forma abaixo temos um erro:
+# print(user.__gera_usuario())
+
+# AttributeError: 'Usuario' object has no attribute '__gera_usuario'
+
+# Uma forma ruim e errada de fazer o acesso mas que funciona, seria assim:
+print(user._Usuario__gera_usuario())
+
+"""
+
+
+######################### TRECHO DE CÓDIGOS USANDO MÉTODOS ESTÁTICOS #########################
+
+
+class Usuario:
+
+    contador = 0
+
+    @classmethod # para uar métodos de classe deve-se usar antes este decorator
+    def conta_usuarios(cls): # a partir do decorator, não usamos mais self, mas cls
+        print(f'Classe: {cls}')
+        print(f'Temos {cls.contador} usuário(s) no sistema.')
+    
+    @classmethod
+    def ver(cls):
+        print('Teste')
+    
+    # Criando nosso método estático:
+    @staticmethod
+    def definicao():
+        return 'UXR344'
+
+    def __init__(self, nome, sobrenome, email, senha):
+        self.__id = Usuario.contador + 1
+        self.__nome = nome
+        self.__sobrenome = sobrenome
+        self.__email = email
+        self.__senha = cryp.hash(senha, rounds=200000, salt_size=16)
+        Usuario.contador = self.__id
+        print(f'Usuário criado: {self.__gera_usuario()}')
+    
+    def nome_completo(self):
+        return f'{self.__nome} {self.__sobrenome}'
+    
+    def checa_senha(self, senha):
+        if cryp.verify(senha, self.__senha):
+            return True
+        return False
+    
+    def __gera_usuario(self):
+        return self.__email.split('@')[0]
+
+
+"""
+IMPORTANTE:
+
+No método de instância, a gente tem acesso à instância do objeto;
+No método de classe, não temos acesso à instância do objeto, somente à classe;
+No método estático, não temos acesso nem à instância e nem à classe, note que não temos o 'cls' dentro dos parênteses do método!
+"""
+
+# Testando Método Estático:
+
+print(Usuario.contador)
+print(Usuario.definicao())
+
+user = Usuario('Robson', 'Ferreira', 'robsonnfer@gmail.com', '123456789')
+
+print(user.contador)
+print(user.definicao())
