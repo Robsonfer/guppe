@@ -107,7 +107,6 @@ print(user2.nome_completo())
 
 """
 
-
 """
 Testando o acesso à senha:
 
@@ -116,7 +115,6 @@ print(f'Senha user2: {user2._Usuario__senha}') # Acesso de forma errada a um atr
 # Note que mesmo fazendo acesso de forma errada, nós conseguimos obter a senha dos usuários
 
 """
-
 
 """
 
@@ -146,7 +144,6 @@ else:
 print(f'Senha User Criptografada: {user._Usuario__senha}') # OBS: Acesso errado!
 
 """
-
 
 ######################### TRECHO DE CÓDIGOS USANDO MÉTODOS DE CLASSE #########################
 
@@ -194,14 +191,12 @@ user1.conta_usuarios() # possível, mas incorreta
 
 """
 
-
 """
 IMPORTANTE: Os Métodos de Classe são conhecidos como Métodos estáticos me outras linguagens.
 
 Os métodos de instância são métodos que acessam atributos de instância.
 Os métodos de classe são métodos que não acessam os atributos de instância, mas pode acessar atributos de classe.
 """
-
 
 ######################### TRECHO DE CÓDIGOS USANDO MÉTODOS PRIVADOS #########################
 
@@ -259,18 +254,17 @@ print(user._Usuario__gera_usuario())
 
 
 class Usuario:
-
     contador = 0
 
-    @classmethod # para uar métodos de classe deve-se usar antes este decorator
-    def conta_usuarios(cls): # a partir do decorator, não usamos mais self, mas cls
+    @classmethod  # para uar métodos de classe deve-se usar antes este decorator
+    def conta_usuarios(cls):  # a partir do decorator, não usamos mais self, mas cls
         print(f'Classe: {cls}')
         print(f'Temos {cls.contador} usuário(s) no sistema.')
-    
+
     @classmethod
     def ver(cls):
         print('Teste')
-    
+
     # Criando nosso método estático:
     @staticmethod
     def definicao():
@@ -284,15 +278,15 @@ class Usuario:
         self.__senha = cryp.hash(senha, rounds=200000, salt_size=16)
         Usuario.contador = self.__id
         print(f'Usuário criado: {self.__gera_usuario()}')
-    
+
     def nome_completo(self):
         return f'{self.__nome} {self.__sobrenome}'
-    
+
     def checa_senha(self, senha):
         if cryp.verify(senha, self.__senha):
             return True
         return False
-    
+
     def __gera_usuario(self):
         return self.__email.split('@')[0]
 
