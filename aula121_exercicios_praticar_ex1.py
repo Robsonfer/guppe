@@ -9,22 +9,19 @@ EXERCÍCIO 1 - Crie uma classe Pessoa, contendo nome, data de nascimento e email
     e setters para os atributos e um método para imprimir os dados de uma pessoa.
 """
 
+from datetime import date
+
 
 # Criando a classe pessoa:
 
 class Pessoa:
 
-    def __init__(self, nome, data_nascimento, email):
-        self.__nome = nome
-        self.__data_nascimento = data_nascimento
-        self.__email = email
+    def __init__(self, nome: str, data_nascimento: date, email: str) -> None:
+        self.__nome: str = nome
+        self.__data_nascimento: date = data_nascimento
+        self.__email: str = email
 
-    def mostra_dados(self):
-        print(f'NAME: {self.__nome} | BIRTH: {self.__data_nascimento} | E-MAIL: {self.__email}')
+    @property
+    def nome(self) -> str:
+        return self.__nome
 
-
-pessoa1 = Pessoa('Robson Ferreira', '17/09/1980', 'robsonnfer@gmail.com')
-pessoa2 = Pessoa('Rosângela S. Ferreira', '02/10/1981', 'rosantiniatelie@gmail.com')
-
-pessoa1.mostra_dados()
-pessoa2.mostra_dados()

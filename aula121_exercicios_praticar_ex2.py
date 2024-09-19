@@ -13,3 +13,8 @@ EXERCÍCIO 2 - Crie uma classe Agenda que pode armazenar contatos e seja possív
     e) imprimir_contato(indice: int); // Imprime os dados do contato informado pelo índice.
 """
 
+
+class Agenda:
+
+    def __init__(self, nome):
+        self.__nome = nome
