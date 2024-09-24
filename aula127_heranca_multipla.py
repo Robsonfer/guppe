@@ -1,8 +1,8 @@
 """
 POO - HERANÇA MÚLTIPLA
 
-Herança múltipla nada mais é do que a possiblidade de uma classe herdar de múltiplas classes fazendo com que a classe filha herde todos os
-    atributos e métodos de todas as classes herdadas.
+Herança múltipla nada mais é do que a possiblidade de uma classe herdar de múltiplas classes fazendo
+    com que a classe filha herde todos os atributos e métodos de todas as classes herdadas.
 
 OBS: A herança múltipla pode ser feita de duas maneiras:
     - Por multiderivação direta;
@@ -80,6 +80,7 @@ class Terrestre(Animal):
 
 
 class Pinguim(Aquatico, Terrestre):
+    # A ordem em que é declarada a herança determina quem será escolhido pelo método cumprimentar() para o objeto tux.
     def __init__(self, nome):
         super().__init__(nome)
 
@@ -97,4 +98,14 @@ print(tatu.cumprimentar())
 tux = Pinguim('Tux')
 print(tux.andar())
 print(tux.nadar())
-print(tux.cumprimentar()) # 
+print(tux.cumprimentar()) # Method Resolution Order (MRO)
+
+# Como descobrir se um objeto é instância de uma classe:
+
+print(f'Tux é instância de Pinguim? {isinstance(tux, Pinguim)}')
+print(f'Tux é instância de Aquatico? {isinstance(tux, Aquatico)}')
+print(f'Tux é instância de Terrestre? {isinstance(tux, Terrestre)}')
+print(f'Tux é instância de object? {isinstance(tux, object)}')
+print(f'Tux é instância de Animal? {isinstance(tux, Animal)}')
+
+# OBS: Toda classe em Python herda automaticamente de object.
