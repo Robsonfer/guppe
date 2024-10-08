@@ -72,3 +72,5 @@ with open('animais.pickle', 'rb') as arquivo: # rb neste caso significa read bin
     print(f'O cachorro chama-se {cachorro.nome}')
     cachorro.late()
     print(f'O tipo do cachorro é {type(cachorro)}')
+
+# Note que não precisamos mais instanciar os objetos, pois o arquivo que está sendo lido já contém as informações necessárias dos objetos!
