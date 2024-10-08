@@ -3,15 +3,16 @@ Aula 137 - Trabalhando com JSON e Pickle
 
 JSON -> Javascript Object Notation
 
-API -> São meios de comunicação entre os serviços oferecidos por empresas como o Twitter, Facebook, YouTube
-    dentre várias outras e teceiros (nós desenvolvedores).
+API -> Application Programing Interface -> São meios de comunicação entre os serviços oferecidos por empresas como
+    o Twitter, Facebook, YouTube dentre várias outras e teceiros (nós desenvolvedores).
 
 Exemplo:
+
+import json
 
 ret = json.dumps(['produto', {'Playstation 4': ('2TB', 'Novo', '220V', 2340)}])
 
 print(type(ret))
-
 print(ret)
 
 
