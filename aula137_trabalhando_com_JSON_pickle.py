@@ -32,4 +32,45 @@ class Gato:
     
     @property
     def raca(self):
-        return self.raca
+        return self.__raca
+
+
+felix = Gato('Felix', 'Vira-lata')
+
+# Colocando a class Gato em formato JSON:
+
+"""
+print(felix.__dict__)
+
+ret = json.dumps(felix.__dict__)
+
+print(ret)
+"""
+
+# Integrando o JSON com o Pickle (preciso instalar biblioteca jsonpickle):
+
+import jsonpickle
+
+"""
+ret = jsonpickle.encode(felix)
+
+print(ret)
+"""
+
+
+# Criando e escrvendo o arquivo JSON/Pickle:
+
+with open('felix.json', 'w') as arquivo:
+    ret = jsonpickle.encode(felix)
+    arquivo.write(ret)
+
+
+# Lendo o arquivo JSON/Pickle:
+
+with open('felix.json', 'r') as arquivo:
+    conteudo = arquivo.read()
+    ret = jsonpickle.decode(conteudo)
+    print(type(ret))
+    print(ret)
+    print(ret.nome)
+    print(ret.raca)
