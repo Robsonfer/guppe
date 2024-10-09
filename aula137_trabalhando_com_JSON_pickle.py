@@ -25,11 +25,11 @@ class Gato:
     def __init__(self, nome, raca) -> None:
         self.__nome = nome
         self.__raca = raca
-    
+
     @property
     def nome(self):
         return self.__nome
-    
+
     @property
     def raca(self):
         return self.__raca
@@ -57,13 +57,11 @@ ret = jsonpickle.encode(felix)
 print(ret)
 """
 
-
 # Criando e escrvendo o arquivo JSON/Pickle:
 
 with open('felix.json', 'w') as arquivo:
     ret = jsonpickle.encode(felix)
     arquivo.write(ret)
-
 
 # Lendo o arquivo JSON/Pickle:
 
