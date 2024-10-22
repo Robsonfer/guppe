@@ -1,7 +1,5 @@
 """
 Aula 142 - Métodos de datas e horas
-
-
 """
 
 import datetime
@@ -94,10 +92,13 @@ print(hoje_formatado)
 hoje_formatado = hoje.strftime('%d/%b/%Y')  # se usar %b, o resultado será com o nome do mês, porém abreviado!
 print(hoje_formatado)
 
-
 # Mas podemos trabalhar essas datas de uma forma melhor:
 
 print('-------- Data no formato pt-BR --------')
+
+
+# Sem a bibilioteca textblob:
+
 
 def formata_data(data):
     if data.month == 1:
@@ -127,3 +128,16 @@ def formata_data(data):
 
 
 print(formata_data(hoje))
+
+# Com a biblioteca googletrans:
+print('-------- Data no formato pt-BR com deep_translator --------')
+
+from deep_translator import GoogleTranslator
+
+
+def formatar_data(data):
+    return f"{data.day} de {GoogleTranslator(source='auto', target='pt').translate(data.strftime('%B')).title()} de {data.year}"
+
+
+hoje = datetime.datetime.today()
+print(formatar_data(hoje))
