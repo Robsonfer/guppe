@@ -129,9 +129,13 @@ def formata_data(data):
 
 print(formata_data(hoje))
 
-# Com a biblioteca googletrans:
+
+# Com a biblioteca deep-translator:
+
+
 print('-------- Data no formato pt-BR com deep_translator --------')
 
+"""
 from deep_translator import GoogleTranslator
 
 
@@ -141,3 +145,66 @@ def formatar_data(data):
 
 hoje = datetime.datetime.today()
 print(formatar_data(hoje))
+"""
+
+print('-------- Por algum motivo no VS Code não funciona o deep_translator --------')
+
+# Convertendo uma string em um objeto do tipo datetime
+# strftime -> string format time
+# strptime -> string parameter time
+
+print('-------- string para o formato datetime com strptime --------')
+
+"""
+nascimento2 = datetime.datetime.strptime('17/09/1980', '%d/%m/%Y')
+
+print(nascimento2)
+
+print('-------- Recebendo a data do usuário --------')
+
+nascimento2 = input('Qual sua data de nascimento? Favor usar o formato dd/mm/aaaa: ')
+nascimento2 = datetime.datetime.strptime(nascimento2, '%d/%m/%Y')
+
+print(nascimento2)
+"""
+
+# Trabalhando somente com a hora:
+
+print('-------- Trabalhando somente com a hora --------')
+almoco = datetime.time(12, 30, 0)
+print(almoco)
+
+print('-------- Marcando tempo de execução com timeit --------')
+
+# Marcando o tempo de execução do nosso código com timeit:
+
+import timeit
+
+# Loop For:
+tempo_for = timeit.timeit('"_".join(str(n) for n in range(100))', number=10000)
+print(tempo_for)
+
+# List Comprehension:
+
+tempo_comp = timeit.timeit('"_".join([str(n) for n in range(100)])', number=10000)
+print(tempo_comp)
+
+# Map:
+
+tempo_map = timeit.timeit('"_".join(map(str, range(100)))', number=10000)
+print(tempo_map)
+
+import functools
+
+# Marcando o tempo de execução do nosso código com timeit, functools e partial:
+print('-------- Marcando tempo de execução com timeit, functools e partial --------')
+
+
+def teste(n):
+    soma = 0
+    for num in range(n * 200):
+        soma = soma + num ** num + 4
+    return soma
+
+print(timeit.timeit(functools.partial(teste,2), number=10000))
+# Esse partial recebe o nome da função que vamos executar e o parâmetro da função: (teste, 2)
