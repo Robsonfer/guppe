@@ -129,7 +129,6 @@ def formata_data(data):
 
 print(formata_data(hoje))
 
-
 # Com a biblioteca deep-translator:
 
 
@@ -206,5 +205,6 @@ def teste(n):
         soma = soma + num ** num + 4
     return soma
 
-print(timeit.timeit(functools.partial(teste,2), number=10000))
+
+print(timeit.timeit(functools.partial(teste, 2), number=10000))
 # Esse partial recebe o nome da função que vamos executar e o parâmetro da função: (teste, 2)
