@@ -79,3 +79,36 @@ def soma(a, b):
 
 
 print(soma(3, 4))
+
+
+# Outro exemplo, aplicando o TDD:
+
+def duplicar(valores):
+    """
+    Duplica os valores em uma lista
+
+    >>> duplicar([1, 2, 3, 4])
+    [2, 4, 6, 8]
+    >>> duplicar([])
+    []
+    >>> duplicar(['a', 'b', 'c', 'd'])
+    ['aa', 'bb', 'cc', 'dd']
+    >>> duplicar([True, None])
+    Traceback (most recent call last):
+        ...
+    TypeError: unsupported operand type(s) for *: 'int' and 'NoneType'
+    """
+    return [2 * elemento for elemento in valores]
+
+
+# Erro inesperado...
+
+
+def fala_oi():
+    """
+    Fala oi
+
+    >>> fala_oi()
+    "oi"
+    """
+    return "oi"
