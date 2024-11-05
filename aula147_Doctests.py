@@ -112,3 +112,19 @@ def fala_oi():
     "oi"
     """
     return "oi"
+
+# OBS: Dentro do doctest, o Python não reconhece string com aspas duplas. Precisa ser aspas simples.
+
+
+# Mais um caso estranho:
+
+
+def verdade():
+    """
+    Retorna verdade
+
+    >>> verdade()
+    True  
+    """
+    return True
+
