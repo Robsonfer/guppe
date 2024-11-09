@@ -8,10 +8,21 @@ from robo import Robo
 
 
 class RoboTestes(unittest.TestCase):
+
+    def setUp(self):
+        self.megaman = Robo(nome='Mega Man', bateria=50)
+        print('setUp() sendo executado...')
+
     def teste_carregar(self):
-        megaman = Robo(nome='Mega Man', bateria=50)
-        megaman.carregar()
-        self.assertEqual(megaman.bateria, 100)
+        self.megaman.carregar()
+        self.assertEqual(self.megaman.bateria, 100)
+
+    def test_dizer_nome(self):
+        self.assertEqual(self.megaman.dizer_nome(), 'Eu sou MEGA MAN')
+        self.assertEqual(self.megaman.bateria, 49, 'A bateria deveria estar em 49%')
+
+    def tearDown(self):
+        print('tearDown() sendo executado...')
 
 
 if __name__ == '__main__':

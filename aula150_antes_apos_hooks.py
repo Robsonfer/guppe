@@ -15,23 +15,21 @@ teardown() -> É executado ao final de cada método de teste. É útil para excl
 
 import unittest
 
+
 class ModuloTest(unittest.TestCase):
     def setUp(self):
         # configurações do setUp
         pass
-
 
     def test_primeiro(self):
         # setUp vai rodar antes do teste
         # tearDonw vai rodar após o teste
         pass
 
-
     def test_segundo(self):
         # setUp vai rodar antes do teste
         # tearDonw vai rodar após o teste
         pass
-
 
     def tearDown(self):
         # configurações do tearDown
