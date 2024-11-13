@@ -4,11 +4,13 @@ Aula 160 - Type Hinting
 
 """
 
+
 # Exemplo:
 
 
 def cumprimentar(nome: str) -> str:
     return f'Olá, {nome}'
+
 
 print(cumprimentar('Robson'))
 
@@ -22,4 +24,6 @@ def cabecalho(texto, alinhamento=True):
     else:
         return f" {texto.title()} ".center(50, '#')
 
+
 print(cabecalho('Geek University'))
+print(cabecalho('Geek University', alinhamento=False))
