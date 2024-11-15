@@ -1,10 +1,6 @@
 """
 Aula 160 - Type Hinting
-
-
 """
-
-
 # Exemplo:
 
 
@@ -18,7 +14,7 @@ print(cumprimentar('Robson'))
 # Exemplo 2 - Teste:
 
 
-def cabecalho(texto, alinhamento=True):
+def cabecalho(texto: str, alinhamento: bool = True) -> str:
     if alinhamento:
         return f"{texto.title()}\n{'-' * len(texto)}"
     else:
