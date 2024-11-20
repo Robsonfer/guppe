@@ -1,6 +1,7 @@
 """
 Aula 160 - Type Hinting
 """
+
 # Exemplo:
 
 
@@ -23,3 +24,6 @@ def cabecalho(texto: str, alinhamento: bool = True) -> str:
 
 print(cabecalho('Geek University'))
 print(cabecalho('Geek University', alinhamento=False))
+
+# Em aula o professor mostra que errar o tipo não trava o programa, mas nesta versão da IDE ele avisa do erro!
+print(cabecalho('geek university', alinhamento='geek'))
