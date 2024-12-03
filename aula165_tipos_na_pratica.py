@@ -39,27 +39,44 @@ print(__annotations__)
 
 import random
 
-NAIPES = [
-    'copas preto',
-    'espadas preto',
-    'paus preto',
-    'ouros preto',
-    'copas vermelho',
-    'espadas vermelho',
-    'paus vermelho',
-    'ouros vermelho'
-]
+NAIPES = ['copas', 'espadas', 'paus', 'ouros']
 CARTAS = '2 3 4 5 6 7 8 9 10 J Q K A'.split()
 
 
 def criar_baralho(aleatorio=False):
-    """ Cria um baralho com 52 cartas"""
+    """
+    Cria um baralho com 52 cartas
+    :param aleatorio: Iniciando em False
+    :return: variável baralho criado com 52 cartas
+    """
     baralho = [(n, c) for c in CARTAS for n in NAIPES]
     if aleatorio:
         random.shuffle(baralho)
     return baralho
 
 
-print(NAIPES)
-print(CARTAS)
-print(criar_baralho(aleatorio=True))
+def distribuir_cartas(baralho):
+    """
+    Gerencia a mão de cartas conforme o baralho gerado.
+    :param baralho: Variavel retornada da função criar_baralho
+    :return: Retorna caras para quatro jogadores
+    """
+    return (baralho[0::4], baralho[1::4], baralho[2::4], baralho[3::4])
+
+
+def jogar():
+    """
+    Inicia um jogo de cartas para quatro jogadores
+    :return: Retorna
+    """
+    cartas = criar_baralho(aleatorio=True)
+    jogadores = 'Player1 Player2 Player3 Player4'.split()
+    maos = {j: m for j, m in zip(jogadores, distribuir_cartas(cartas))}
+
+    for jogador, cartas in maos.items():
+        carta = ' '.join(f"{j}{c}" for (j, c) in cartas)
+        print(f'{jogador}: {carta}')
+
+
+if __name__ == '__main__':
+    jogar()
