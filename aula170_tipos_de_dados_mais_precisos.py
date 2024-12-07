@@ -25,8 +25,9 @@ Tipos mais preciso:
     - Protocols
 """
 
-# Literal Type: Indica que um parâmetro ou retorno é forçado a um ou mais valores literais específicos.
-from typing import Literal
+# LITERAL TYPE: Indica que um parâmetro ou retorno é forçado a um ou mais valores literais específicos.
+from typing import Literal, Union, Final
+
 
 # Exemplo:
 
@@ -41,8 +42,45 @@ def calcula_v1(operacao: str, num1: int, num2: int) -> None:
     elif operacao == '-':
         print(f'{num1} - {num2} = {num1 - num2}')
     else:
-        raise ValueError(f'Operação inválida {operacao!r}')
+        raise ValueError(f'Operação inválida {operacao!r}') # !r destaca o argumento da operação com erro entre aspas
+
 
 calcula_v1('+', 6, 4)
 calcula_v1('-', 10, 2)
-calcula_v1('*', 3, 5)
+# calcula_v1('*', 3, 5)
+
+
+def calcula_v2(operacao: Literal['+', '-'], num1: int, num2: int) -> None:
+    if operacao == '+':
+        print(f'{num1} + {num2} = {num1 + num2}')
+    elif operacao == '-':
+        print(f'{num1} - {num2} = {num1 - num2}')
+    else:
+        raise ValueError(f'Operação inválida {operacao!r}')
+
+
+calcula_v2('+', 6, 4)
+calcula_v2('-', 10, 2)
+# calcula_v2('*', 3, 5)
+
+
+# Union - Determina o retorno de dois tipos:
+
+
+def soma(num1: int, num2: int) -> Union[str, int]:
+    resultado = num1 + num2
+
+    if resultado > 50:
+        return f'O valor {resultado} é muito grande'
+    else:
+        return resultado
+
+
+print(soma(25, 25))
+
+
+# Final - Utiliza-se para criar constantes:
+
+NOME: Final = 'Geek'
+
+print(NOME)
