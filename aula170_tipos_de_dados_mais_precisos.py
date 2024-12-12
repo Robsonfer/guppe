@@ -125,6 +125,7 @@ class Estagiario(Estudante):
 
 # *** Typed Dictionaries *** :
 
+
 class CursoPython(TypedDict):
     versao: str
     atualizacao: int
@@ -140,8 +141,23 @@ print(outro)
 
 # *** Protocols ***
 
+from typing import Protocol
+
+
 class Curso(Protocol):
     titulo: str
 
+
 def estudar(valor: Curso) -> None:
     print(f'Estou estudando o curso {valor.titulo}')
+
+
+class Venda:
+    titulo = 'Programação em Python'
+
+v1 = Venda()
+# c1 = Curso()
+# c1.titulo = 'Programação em Python'
+
+# estudar(c1)
+estudar(v1)
