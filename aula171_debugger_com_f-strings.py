@@ -36,7 +36,7 @@ print(f'{geek.upper()[::-1]=}')
 
 # Mas como assim fazer debugger? Exemplo:
 
-# Podemos testar situações vendo o resultado junto com a expressão usada:
+# Podemos testar situações vendo o resultado com a expressão usada:
 print(f'{geek.upper()[0:4:-1]=}')
 
 # Ou:
