@@ -31,7 +31,7 @@ class Calcular:
         if self.operacao == 1:
             op = 'Somar'
         elif self.operacao == 2:
-            of = 'Diminuir'
+            op = 'Diminuir'
         elif self.operacao == 3:
             op = 'Multiplicar'
         else:
