@@ -17,7 +17,16 @@ def jogar(pontos: int) -> None:
     resultado: int = int(input())
 
     if calc.checar_resultado(resultado):
-        pontos =+ 1
+        if dificuldade == 1:
+            pontos += 1
+        elif dificuldade == 2:
+            pontos += 2
+        elif dificuldade == 3:
+            pontos += 3
+        elif dificuldade == 4:
+            pontos += 4
+        else:
+            pontos += 1000
         print(f'Você tem {pontos} ponto(s).')
 
     continuar: int = int(input('Deseja continuar no jogo? [1 - sim, 0 - não] '))
