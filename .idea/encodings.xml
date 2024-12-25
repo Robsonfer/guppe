@@ -10,6 +10,11 @@
     <file url="file://$PROJECT_DIR$/Projeto_2_Mercado/models/produto.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Projeto_2_Mercado/teste.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Projeto_2_Mercado/utils/helper.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Projeto_3_Banco/banco.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Projeto_3_Banco/models/cliente.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Projeto_3_Banco/models/conta.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Projeto_3_Banco/teste.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Projeto_3_Banco/utils/helper.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/aula090int_seek_cursors.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/aula141_deltas_data_hora.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/aula142_metodos_data_hora.py" charset="UTF-8" />
