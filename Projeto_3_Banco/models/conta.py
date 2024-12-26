@@ -1,5 +1,5 @@
-from Projeto_3_Banco.models.cliente import Cliente
-from Projeto_3_Banco.utils.helper import formata_float_str_moeda
+from models.cliente import Cliente
+from utils.helper import formata_float_str_moeda
 
 
 class Conta:

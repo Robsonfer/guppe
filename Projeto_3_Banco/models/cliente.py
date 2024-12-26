@@ -1,5 +1,5 @@
 from datetime import date
-from Projeto_3_Banco.utils.helper import date_para_str, str_para_date
+from utils.helper import date_para_str, str_para_date
 
 
 class Cliente:
