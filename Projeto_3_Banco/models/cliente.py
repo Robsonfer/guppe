@@ -1,5 +1,5 @@
 from datetime import date
-from utils.helper import date_para_str, str_para_date
+from Projeto_3_Banco.utils.helper import date_para_str, str_para_date
 
 
 class Cliente:
@@ -40,5 +40,5 @@ class Cliente:
 
     def __str__(self: object) -> str:
         return (f'Código do cliente: {self.codigo}\nNome do cliente: {self.nome}\n'
-                f'Data de nascimento: {self.data_nacimento}\n'
+                f'Data de nascimento: {self.data_nascimento}\n'
                 f'Data de cadastro: {self.data_cadastro}')

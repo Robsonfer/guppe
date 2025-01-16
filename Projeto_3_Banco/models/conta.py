@@ -1,9 +1,9 @@
-from models.cliente import Cliente
-from utils.helper import formata_float_str_moeda
+from Projeto_3_Banco.models.cliente import Cliente
+from Projeto_3_Banco.utils.helper import formata_float_str_moeda
 
 
 class Conta:
-    codigo: int = 1001
+    codigo: int = 1000
 
     def __init__(self: object, cliente: Cliente) -> None:
         self.__numero: int = Conta.codigo + 1
@@ -14,7 +14,8 @@ class Conta:
         Conta.codigo += 1
 
     def __str__(self: object) -> str:
-        return (f'Número da conta: {self.numero}\nCliente: {self.cliente.nome}\n'
+        return (f'Número da conta: {self.numero}\n'
+                f'Cliente: {self.cliente.nome}\n'
                 f'Saldo total: {formata_float_str_moeda(self.saldo_total)}')
 
     @property
