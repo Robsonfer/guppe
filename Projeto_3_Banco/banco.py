@@ -38,7 +38,7 @@ def menu() -> None:
     elif opcao == 5:
         listar_contas()
     elif opcao == 6:
-        print('Foi um prazer servi-lo. Volte sempre!')
+        print("Foi um prazer servi-lo. Volte sempre!")
         sleep(3)
         exit(0)
     else:
