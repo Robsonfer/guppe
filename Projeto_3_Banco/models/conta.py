@@ -72,9 +72,9 @@ class Conta:
                 self.limite = self.limite + restante
                 self.saldo = 0
                 self.saldo_total = self._calcula_saldo_total
-                print('Saque efetuado com sucesso!')
+            print('Saque efetuado com sucesso!')
         else:
-            print('Erro ao efetuar o saque. Favor inserir um valor válido!')
+            print('Erro ao efetuar o saque. Verifique se você tem saldo para efetuar essa operação!')
 
     def transferir(self: object, destino: object, valor: float) -> None:
         if valor > 0 and self.saldo_total >= valor:
@@ -92,4 +92,4 @@ class Conta:
                 destino.saldo_total = destino._calcula_saldo_total
             print('Transferência realizada com sucesso!')
         else:
-            print('Erro ao efetuar depósito. Favor inserir um valor válido!')
+            print('Erro ao efetuar depósito. Verifique se você tem saldo para efetuar essa operação!')

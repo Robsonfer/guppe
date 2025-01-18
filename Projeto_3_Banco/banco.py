@@ -38,7 +38,7 @@ def menu() -> None:
     elif opcao == 5:
         listar_contas()
     elif opcao == 6:
-        print('Volte sempre!')
+        print('Foi um prazer servi-lo. Volte sempre!')
         sleep(3)
         exit(0)
     else:
@@ -126,9 +126,9 @@ def efetuar_transferencia() -> None:
             print(f'A sua conta com número o {numero_o} não foi encontrada!')
     else:
         print('ATENÇÃO! Ainda não existem contas cadastradas!')
-        sleep(3)
-        print('\n')
-        menu()
+    sleep(3)
+    print('\n')
+    menu()
 
 
 def listar_contas() -> None:
@@ -145,9 +145,9 @@ def listar_contas() -> None:
         menu()
     else:
         print('ATENÇÃO! Ainda não existem contas cadastradas!')
-        sleep(3)
-        print('\n')
-        menu()
+    sleep(3)
+    print('\n')
+    menu()
 
 
 def buscar_conta_por_numero(numero: int) -> Conta:
@@ -157,8 +157,8 @@ def buscar_conta_por_numero(numero: int) -> Conta:
         for conta in contas:
             if conta.numero == numero:
                 c = conta
-    else:
-        return c
+
+    return c
 
 
 if __name__ == '__main__':
